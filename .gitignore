@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets: never commit your API key
+.env
+
+# Local saved cases, scratch output and OS files
+data/
+tmp/
+.DS_Store

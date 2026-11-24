@@ -1,0 +1,12 @@
+FICTIONAL COMPANY - CODING DEMONSTRATION ONLY
+Company name: Orion Automation Software Ltd.
+Business: Industrial maintenance software sold as annual subscriptions.
+Reporting currency: USD. Financial reporting period: FY2025.
+FY2025 revenue was USD 10.0 million.
+FY2025 reported EBITDA was USD -2.0 million (a loss).
+At the end of FY2025, net debt was USD 1.0 million.
+FY2025 revenue growth was 25% compared with FY2024.
+In FY2025, the largest single customer accounted for 35% of revenue.
+No forecast, DCF assumptions or valuation multiple is supplied.
+Future profitability, reinvestment and tax assumptions require analyst review.
+These invented figures are not investment evidence.

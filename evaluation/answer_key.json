@@ -1,0 +1,1002 @@
+[
+  {
+    "file": "eval_01_solara_grid.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Solara Grid",
+        "needle": "Solara Grid plc (the Company) heads the group described in this review."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group develops and operates utility-scale solar farms that sell electricity under long-term power purchase agreements.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "GBP",
+        "needle": "All amounts in this review are presented in pounds sterling."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the year ended 31 December 2024."
+      },
+      "revenue": {
+        "value": "769100000",
+        "needle": "Turnover for the period was 769.1 million pounds sterling."
+      },
+      "revenue_growth": {
+        "value": "0.17",
+        "needle": "This was an increase of 17% on the prior year."
+      },
+      "ebitda": {
+        "value": "407600000",
+        "needle": "Operating profit before depreciation and amortisation was 407.6 million pounds sterling."
+      },
+      "net_debt": {
+        "value": "791200000",
+        "needle": "Borrowings less cash and cash equivalents stood at 791.2 million pounds sterling at 31 December 2024."
+      },
+      "customer_concentration": {
+        "value": "0.12",
+        "needle": "Our largest customer accounted for 12% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_02_northway_tollroads.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": false,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Northway Tollroads",
+        "needle": "Northway Tollroads Inc. (the Company) heads the group described in this review."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group operates tolled motorways and bridges under long-term government concessions.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "CAD",
+        "needle": "All amounts in this review are presented in Canadian dollars."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the year ended 31 December 2025."
+      },
+      "revenue": {
+        "value": "733300000",
+        "needle": "The group generated sales of 733.3 million Canadian dollars during the period."
+      },
+      "revenue_growth": {
+        "value": "0.17",
+        "needle": "That was 17% higher than the previous year."
+      },
+      "ebitda": {
+        "value": "234700000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 234.7 million Canadian dollars."
+      },
+      "net_debt": {
+        "value": "1399000000",
+        "needle": "Borrowings less cash and cash equivalents stood at 1,399.0 million Canadian dollars at 31 December 2025."
+      },
+      "customer_concentration": {
+        "value": null,
+        "needle": null
+      }
+    }
+  },
+  {
+    "file": "eval_03_clearbrook_water.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Clearbrook Water",
+        "needle": "The registered entity is Clearbrook Water Inc.."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group supplies drinking water and treats wastewater for regulated municipal customers.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "AUD",
+        "needle": "All amounts in this review are presented in Australian dollars."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the twelve months ended 30 June 2025."
+      },
+      "revenue": {
+        "value": "789500000",
+        "needle": "Turnover for the period was 789.5 million Australian dollars."
+      },
+      "revenue_growth": {
+        "value": "0.08",
+        "needle": "This was an increase of 8% on the prior year."
+      },
+      "ebitda": {
+        "value": "339500000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 339.5 million Australian dollars."
+      },
+      "net_debt": {
+        "value": "2730700000",
+        "needle": "Borrowings less cash and cash equivalents stood at 2,730.7 million Australian dollars at 30 June 2025."
+      },
+      "customer_concentration": {
+        "value": "0.29",
+        "needle": "29% of income came from one offtaker under a long-term contract."
+      }
+    }
+  },
+  {
+    "file": "eval_04_meridian_ports.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "thousands"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Meridian Ports",
+        "needle": "The registered entity is Meridian Ports Group plc."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group runs container and bulk terminals at three deep-water harbours.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "GBP",
+        "needle": "All amounts in this review are presented in thousands of pounds sterling unless otherwise stated."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the year ended 31 December 2024."
+      },
+      "revenue": {
+        "value": "753800000",
+        "needle": "The group generated sales of 753,800 during the period."
+      },
+      "revenue_growth": {
+        "value": "0.06",
+        "needle": "Income was up 6% year on year."
+      },
+      "ebitda": {
+        "value": "399500000",
+        "needle": "Operating profit before depreciation and amortisation was 399,500."
+      },
+      "net_debt": {
+        "value": "50900000",
+        "needle": "Net borrowings at 31 December 2024 were 50,900."
+      },
+      "customer_concentration": {
+        "value": "0.17",
+        "needle": "Our largest customer accounted for 17% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_05_corelink_data_centres.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": false,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Corelink Data Centres",
+        "needle": "Corelink Data Centres Ltd is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group builds and leases powered data-centre capacity to cloud and enterprise tenants.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "EUR",
+        "needle": "All amounts in this review are presented in euros."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the financial year ended 31 March 2025."
+      },
+      "revenue": {
+        "value": "755000000",
+        "needle": "Turnover for the period was 755.0 million euros."
+      },
+      "revenue_growth": {
+        "value": null,
+        "needle": null
+      },
+      "ebitda": {
+        "value": "256700000",
+        "needle": "EBITDA for the period was 256.7 million euros."
+      },
+      "net_debt": {
+        "value": "1709000000",
+        "needle": "Net debt at 31 March 2025 was 1,709.0 million euros."
+      },
+      "customer_concentration": {
+        "value": "0.24",
+        "needle": "Our largest customer accounted for 24% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_06_heatwell_district_energy.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": false,
+      "net_cash": true,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Heatwell District Energy",
+        "needle": "Heatwell District Energy plc is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group owns district heating networks that supply hot water to homes and offices.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "AUD",
+        "needle": "All amounts in this review are presented in Australian dollars."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the year ended 31 December 2025."
+      },
+      "revenue": {
+        "value": "400200000",
+        "needle": "Total income from operations reached 400.2 million Australian dollars."
+      },
+      "revenue_growth": {
+        "value": "0.07",
+        "needle": "That was 7% higher than the previous year."
+      },
+      "ebitda": {
+        "value": "108100000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 108.1 million Australian dollars."
+      },
+      "net_debt": {
+        "value": "-71300000",
+        "needle": "At 31 December 2025, cash exceeded borrowings, giving a net cash position of 71.3 million Australian dollars."
+      },
+      "customer_concentration": {
+        "value": null,
+        "needle": null
+      }
+    }
+  },
+  {
+    "file": "eval_07_ironline_rail_freight.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Ironline Rail Freight",
+        "needle": "The registered entity is Ironline Rail Freight Ltd."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group operates rail freight terminals and wagon fleets for bulk and intermodal cargo.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "GBP",
+        "needle": "All amounts in this review are presented in pounds sterling."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the twelve months ended 30 June 2025."
+      },
+      "revenue": {
+        "value": "276700000",
+        "needle": "Total income from operations reached 276.7 million pounds sterling."
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "needle": "This was an increase of 18% on the prior year."
+      },
+      "ebitda": {
+        "value": "160500000",
+        "needle": "Operating profit before depreciation and amortisation was 160.5 million pounds sterling."
+      },
+      "net_debt": {
+        "value": "2615600000",
+        "needle": "Borrowings less cash and cash equivalents stood at 2,615.6 million pounds sterling at 30 June 2025."
+      },
+      "customer_concentration": {
+        "value": "0.29",
+        "needle": "29% of income came from one offtaker under a long-term contract."
+      }
+    }
+  },
+  {
+    "file": "eval_08_skyharbour_airports.txt",
+    "flags": {
+      "adjusted_only": true,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "thousands"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Skyharbour Airports",
+        "needle": "Skyharbour Airports plc is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group owns and operates two regional airports and their retail concessions.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "GBP",
+        "needle": "All amounts in this review are presented in thousands of pounds sterling unless otherwise stated."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the financial year ended 31 March 2024."
+      },
+      "revenue": {
+        "value": "254100000",
+        "needle": "Revenues amounted to 254,100 for the period."
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "needle": "This was an increase of 18% on the prior year."
+      },
+      "ebitda": {
+        "value": null,
+        "needle": null
+      },
+      "net_debt": {
+        "value": "911900000",
+        "needle": "Borrowings less cash and cash equivalents stood at 911,900 at 31 March 2024."
+      },
+      "customer_concentration": {
+        "value": "0.16",
+        "needle": "Our largest customer accounted for 16% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_09_gale_point_wind.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Gale Point Wind",
+        "needle": "Gale Point Wind Holdings Ltd is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group owns onshore and offshore wind farms with contracted and merchant revenue.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "EUR",
+        "needle": "All amounts in this review are presented in euros."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the twelve months ended 30 June 2025."
+      },
+      "revenue": {
+        "value": "275600000",
+        "needle": "Revenues amounted to 275.6 million euros for the period."
+      },
+      "revenue_growth": {
+        "value": "0.13",
+        "needle": "That was 13% higher than the previous year."
+      },
+      "ebitda": {
+        "value": "157100000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 157.1 million euros."
+      },
+      "net_debt": {
+        "value": "2237800000",
+        "needle": "Net borrowings at 30 June 2025 were 2,237.8 million euros."
+      },
+      "customer_concentration": {
+        "value": "0.28",
+        "needle": "The single biggest client represented 28% of turnover."
+      }
+    }
+  },
+  {
+    "file": "eval_10_brightfibre_networks.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": false,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Brightfibre Networks",
+        "needle": "Brightfibre Networks plc (the Company) heads the group described in this review."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group builds and wholesales full-fibre broadband networks to internet providers.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "CAD",
+        "needle": "All amounts in this review are presented in Canadian dollars."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the twelve months ended 30 June 2024."
+      },
+      "revenue": {
+        "value": "760400000",
+        "needle": "Total income from operations reached 760.4 million Canadian dollars."
+      },
+      "revenue_growth": {
+        "value": "0.14",
+        "needle": "This was an increase of 14% on the prior year."
+      },
+      "ebitda": {
+        "value": "372600000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 372.6 million Canadian dollars."
+      },
+      "net_debt": {
+        "value": "789100000",
+        "needle": "Net debt at 30 June 2024 was 789.1 million Canadian dollars."
+      },
+      "customer_concentration": {
+        "value": null,
+        "needle": null
+      }
+    }
+  },
+  {
+    "file": "eval_11_keystone_pipelines.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Keystone Pipelines",
+        "needle": "Keystone Pipelines plc (the Company) heads the group described in this review."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group transports natural gas through regulated high-pressure pipelines.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "USD",
+        "needle": "All amounts in this review are presented in US dollars."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the twelve months ended 30 June 2024."
+      },
+      "revenue": {
+        "value": "175500000",
+        "needle": "The group generated sales of 175.5 million US dollars during the period."
+      },
+      "revenue_growth": {
+        "value": "0.09",
+        "needle": "Income was up 9% year on year."
+      },
+      "ebitda": {
+        "value": "100000000",
+        "needle": "Operating profit before depreciation and amortisation was 100.0 million US dollars."
+      },
+      "net_debt": {
+        "value": "2829900000",
+        "needle": "Net borrowings at 30 June 2024 were 2,829.9 million US dollars."
+      },
+      "customer_concentration": {
+        "value": "0.21",
+        "needle": "The single biggest client represented 21% of turnover."
+      }
+    }
+  },
+  {
+    "file": "eval_12_renew_cycle_energy.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": false,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "thousands"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Renew Cycle Energy",
+        "needle": "Renew Cycle Energy Ltd is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group converts household waste into electricity and heat at energy-from-waste plants.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "USD",
+        "needle": "All amounts in this review are presented in thousands of US dollars unless otherwise stated."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the financial year ended 31 March 2024."
+      },
+      "revenue": {
+        "value": "435700000",
+        "needle": "Total income from operations reached 435,700."
+      },
+      "revenue_growth": {
+        "value": null,
+        "needle": null
+      },
+      "ebitda": {
+        "value": "265800000",
+        "needle": "Operating profit before depreciation and amortisation was 265,800."
+      },
+      "net_debt": {
+        "value": "151200000",
+        "needle": "Net debt at 31 March 2024 was 151,200."
+      },
+      "customer_concentration": {
+        "value": "0.37",
+        "needle": "Our largest customer accounted for 37% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_13_voltway_charging.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "VoltWay Charging",
+        "needle": "VoltWay Charging Holdings Ltd (the Company) heads the group described in this review."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group installs and operates rapid electric-vehicle charging hubs.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "EUR",
+        "needle": "All amounts in this review are presented in euros."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the year ended 31 December 2024."
+      },
+      "revenue": {
+        "value": "595500000",
+        "needle": "Turnover for the period was 595.5 million euros."
+      },
+      "revenue_growth": {
+        "value": "0.06",
+        "needle": "That was 6% higher than the previous year."
+      },
+      "ebitda": {
+        "value": "208400000",
+        "needle": "EBITDA for the period was 208.4 million euros."
+      },
+      "net_debt": {
+        "value": "98100000",
+        "needle": "Borrowings less cash and cash equivalents stood at 98.1 million euros at 31 December 2024."
+      },
+      "customer_concentration": {
+        "value": "0.19",
+        "needle": "Our largest customer accounted for 19% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_14_steadfast_storage.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": false,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Steadfast Storage",
+        "needle": "The registered entity is Steadfast Storage Holdings Ltd."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group operates grid-scale battery storage sites that provide balancing services.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "GBP",
+        "needle": "All amounts in this review are presented in pounds sterling."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the year ended 31 December 2024."
+      },
+      "revenue": {
+        "value": "223900000",
+        "needle": "Revenues amounted to 223.9 million pounds sterling for the period."
+      },
+      "revenue_growth": {
+        "value": "0.17",
+        "needle": "That was 17% higher than the previous year."
+      },
+      "ebitda": {
+        "value": "98500000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 98.5 million pounds sterling."
+      },
+      "net_debt": {
+        "value": "874300000",
+        "needle": "Borrowings less cash and cash equivalents stood at 874.3 million pounds sterling at 31 December 2024."
+      },
+      "customer_concentration": {
+        "value": null,
+        "needle": null
+      }
+    }
+  },
+  {
+    "file": "eval_15_riverfall_hydro.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": true,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Riverfall Hydro",
+        "needle": "Riverfall Hydro Inc. is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group owns run-of-river hydroelectric plants with long-dated offtake contracts.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "EUR",
+        "needle": "All amounts in this review are presented in euros."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the year ended 31 December 2025."
+      },
+      "revenue": {
+        "value": "623500000",
+        "needle": "Revenues amounted to 623.5 million euros for the period."
+      },
+      "revenue_growth": {
+        "value": "0.06",
+        "needle": "Income was up 6% year on year."
+      },
+      "ebitda": {
+        "value": "374100000",
+        "needle": "Earnings before interest, tax, depreciation and amortisation totalled 374.1 million euros."
+      },
+      "net_debt": {
+        "value": "-84000000",
+        "needle": "At 31 December 2025, cash exceeded borrowings, giving a net cash position of 84.0 million euros."
+      },
+      "customer_concentration": {
+        "value": "0.19",
+        "needle": "The single biggest client represented 19% of turnover."
+      }
+    }
+  },
+  {
+    "file": "eval_16_coastline_desalination.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "thousands"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Coastline Desalination",
+        "needle": "Coastline Desalination Inc. is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group operates seawater desalination plants under availability-based contracts.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "USD",
+        "needle": "All amounts in this review are presented in thousands of US dollars unless otherwise stated."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the year ended 31 December 2024."
+      },
+      "revenue": {
+        "value": "277900000",
+        "needle": "Revenues amounted to 277,900 for the period."
+      },
+      "revenue_growth": {
+        "value": "0.10",
+        "needle": "Income was up 10% year on year."
+      },
+      "ebitda": {
+        "value": "125100000",
+        "needle": "EBITDA for the period was 125,100."
+      },
+      "net_debt": {
+        "value": "63200000",
+        "needle": "Net debt at 31 December 2024 was 63,200."
+      },
+      "customer_concentration": {
+        "value": "0.25",
+        "needle": "25% of income came from one offtaker under a long-term contract."
+      }
+    }
+  },
+  {
+    "file": "eval_17_metroline_transit.txt",
+    "flags": {
+      "adjusted_only": true,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Metroline Transit",
+        "needle": "Metroline Transit Holdings Ltd is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group operates light-rail systems under public-private partnership agreements.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "AUD",
+        "needle": "All amounts in this review are presented in Australian dollars."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the twelve months ended 30 June 2024."
+      },
+      "revenue": {
+        "value": "639100000",
+        "needle": "The group generated sales of 639.1 million Australian dollars during the period."
+      },
+      "revenue_growth": {
+        "value": "0.12",
+        "needle": "That was 12% higher than the previous year."
+      },
+      "ebitda": {
+        "value": null,
+        "needle": null
+      },
+      "net_debt": {
+        "value": "1046400000",
+        "needle": "Borrowings less cash and cash equivalents stood at 1,046.4 million Australian dollars at 30 June 2024."
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "needle": "Our largest customer accounted for 42% of revenue."
+      }
+    }
+  },
+  {
+    "file": "eval_18_granite_towers.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": false,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Granite Towers",
+        "needle": "Granite Towers Inc. (the Company) heads the group described in this review."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group owns telecom towers and leases space to mobile network operators.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "GBP",
+        "needle": "All amounts in this review are presented in pounds sterling."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the year ended 31 December 2024."
+      },
+      "revenue": {
+        "value": "365600000",
+        "needle": "Turnover for the period was 365.6 million pounds sterling."
+      },
+      "revenue_growth": {
+        "value": "0.10",
+        "needle": "Income was up 10% year on year."
+      },
+      "ebitda": {
+        "value": "212000000",
+        "needle": "Operating profit before depreciation and amortisation was 212.0 million pounds sterling."
+      },
+      "net_debt": {
+        "value": "1710700000",
+        "needle": "Borrowings less cash and cash equivalents stood at 1,710.7 million pounds sterling at 31 December 2024."
+      },
+      "customer_concentration": {
+        "value": null,
+        "needle": null
+      }
+    }
+  },
+  {
+    "file": "eval_19_evergreen_biogas.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": true,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "millions"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Evergreen Biogas",
+        "needle": "The registered entity is Evergreen Biogas Ltd."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group produces renewable gas from agricultural waste and injects it into the grid.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "AUD",
+        "needle": "All amounts in this review are presented in Australian dollars."
+      },
+      "period": {
+        "value": "2024",
+        "needle": "These results cover the financial year ended 31 March 2024."
+      },
+      "revenue": {
+        "value": "136500000",
+        "needle": "Revenues amounted to 136.5 million Australian dollars for the period."
+      },
+      "revenue_growth": {
+        "value": "0.10",
+        "needle": "Income was up 10% year on year."
+      },
+      "ebitda": {
+        "value": "60100000",
+        "needle": "EBITDA for the period was 60.1 million Australian dollars."
+      },
+      "net_debt": {
+        "value": "2690800000",
+        "needle": "Net debt at 31 March 2024 was 2,690.8 million Australian dollars."
+      },
+      "customer_concentration": {
+        "value": "0.23",
+        "needle": "The single biggest client represented 23% of turnover."
+      }
+    }
+  },
+  {
+    "file": "eval_20_harbour_cold_chain.txt",
+    "flags": {
+      "adjusted_only": false,
+      "adjusted_decoy": false,
+      "growth_present": true,
+      "concentration_present": true,
+      "net_cash": false,
+      "units": "thousands"
+    },
+    "facts": {
+      "company_name": {
+        "value": "Harbour Cold Chain",
+        "needle": "Harbour Cold Chain Holdings Ltd is the parent company of the group."
+      },
+      "business": {
+        "value": null,
+        "needle": "The group runs temperature-controlled logistics hubs at major ports.",
+        "free_text": true
+      },
+      "currency": {
+        "value": "USD",
+        "needle": "All amounts in this review are presented in thousands of US dollars unless otherwise stated."
+      },
+      "period": {
+        "value": "2025",
+        "needle": "These results cover the year ended 31 December 2025."
+      },
+      "revenue": {
+        "value": "175300000",
+        "needle": "Turnover for the period was 175,300."
+      },
+      "revenue_growth": {
+        "value": "0.05",
+        "needle": "This was an increase of 5% on the prior year."
+      },
+      "ebitda": {
+        "value": "82400000",
+        "needle": "Operating profit before depreciation and amortisation was 82,400."
+      },
+      "net_debt": {
+        "value": "1925200000",
+        "needle": "Net debt at 31 December 2025 was 1,925,200."
+      },
+      "customer_concentration": {
+        "value": "0.28",
+        "needle": "The single biggest client represented 28% of turnover."
+      }
+    }
+  }
+]

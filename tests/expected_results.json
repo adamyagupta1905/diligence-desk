@@ -1,0 +1,515 @@
+[
+  {
+    "file": "01_complete_millions.txt",
+    "title": "Complete baseline in millions",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": "8000000",
+        "status": [
+          "found"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": false,
+    "blocked_fields": [],
+    "notes": "Confirm inputs unchanged. Expect corrected_fields=[]; EV=80000000, equity=68000000 at 10x."
+  },
+  {
+    "file": "02_missing_ebitda.txt",
+    "title": "Missing required EBITDA",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": null,
+        "status": [
+          "missing"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": true,
+    "blocked_fields": [
+      "ebitda"
+    ],
+    "notes": "Do not infer EBITDA from revenue, growth, another document, or the previous run."
+  },
+  {
+    "file": "03_conflicting_revenue.txt",
+    "title": "Unresolved same-period revenue conflict",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": null,
+        "status": [
+          "conflicting"
+        ]
+      },
+      "ebitda": {
+        "value": "8000000",
+        "status": [
+          "found"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": true,
+    "blocked_fields": [
+      "revenue"
+    ],
+    "notes": "Either value exists in the source. Silently choosing one is a failed test, even if quote matching passes."
+  },
+  {
+    "file": "04_all_thousands.txt",
+    "title": "All monetary amounts in thousands",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": "8000000",
+        "status": [
+          "found"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": false,
+    "blocked_fields": [],
+    "notes": "Multiply monetary figures by 1000; normalized values must equal the baseline."
+  },
+  {
+    "file": "05_mixed_units.txt",
+    "title": "Different units for each monetary metric",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": "8000000",
+        "status": [
+          "found"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": false,
+    "blocked_fields": [],
+    "notes": "Normalize each metric independently; do not apply the revenue unit to every number."
+  },
+  {
+    "file": "06_wrong_period_ebitda.txt",
+    "title": "Latest revenue but only prior-year EBITDA",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": null,
+        "status": [
+          "missing",
+          "conflicting"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": true,
+    "blocked_fields": [
+      "ebitda"
+    ],
+    "notes": "Do not relabel FY2024 EBITDA as FY2025. The provided growth is a reported, rounded figure; do not derive replacements."
+  },
+  {
+    "file": "07_adjusted_ebitda_only.txt",
+    "title": "Adjusted EBITDA is not reported EBITDA",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": null,
+        "status": [
+          "missing"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": "0.18",
+        "status": [
+          "found"
+        ]
+      },
+      "customer_concentration": {
+        "value": "0.42",
+        "status": [
+          "found"
+        ]
+      }
+    },
+    "blocked": true,
+    "blocked_fields": [
+      "ebitda"
+    ],
+    "notes": "This engine explicitly requests reported EBITDA. A methodology change would need separate approval and implementation."
+  },
+  {
+    "file": "08_optional_figures_missing.txt",
+    "title": "Missing optional growth and concentration",
+    "expected": {
+      "company_name": {
+        "value": "Northstar Industrial Software Ltd.",
+        "status": [
+          "found"
+        ]
+      },
+      "business": {
+        "value": "Subscription maintenance-management software for manufacturing companies.",
+        "status": [
+          "found"
+        ]
+      },
+      "currency": {
+        "value": "USD",
+        "status": [
+          "found"
+        ]
+      },
+      "period": {
+        "value": "FY2025",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue": {
+        "value": "50000000",
+        "status": [
+          "found"
+        ]
+      },
+      "ebitda": {
+        "value": "8000000",
+        "status": [
+          "found"
+        ]
+      },
+      "net_debt": {
+        "value": "12000000",
+        "status": [
+          "found"
+        ]
+      },
+      "revenue_growth": {
+        "value": null,
+        "status": [
+          "missing"
+        ]
+      },
+      "customer_concentration": {
+        "value": null,
+        "status": [
+          "missing"
+        ]
+      }
+    },
+    "blocked": false,
+    "blocked_fields": [],
+    "notes": "Calculation can proceed after review; both optional facts remain unknown and generate diligence flags, not zeroes."
+  }
+]

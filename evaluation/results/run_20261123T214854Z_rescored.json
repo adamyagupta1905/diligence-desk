@@ -1,0 +1,5475 @@
+{
+  "model": "gemini-3.8-flash",
+  "time_utc": "20261123T214854Z",
+  "summary": {
+    "llm_only": {
+      "documents": 20,
+      "errors": 2,
+      "value_accuracy": "162/162",
+      "source_accuracy": "154/154",
+      "valuation_correct": 16,
+      "valuation_wrong": 0,
+      "blocked_correctly": 2,
+      "blocked_unnecessarily": 0,
+      "avg_seconds": 30.17,
+      "avg_passages_sent": 14.0,
+      "input_tokens": 30007,
+      "output_tokens": 56505
+    },
+    "pipeline": {
+      "documents": 20,
+      "errors": 3,
+      "value_accuracy": "153/153",
+      "source_accuracy": "145/145",
+      "valuation_correct": 14,
+      "valuation_wrong": 0,
+      "blocked_correctly": 2,
+      "blocked_unnecessarily": 1,
+      "avg_seconds": 33.4,
+      "avg_passages_sent": 11.6,
+      "input_tokens": 24709,
+      "output_tokens": 57206,
+      "embedding_fallbacks": 0
+    }
+  },
+  "per_field": {
+    "llm_only": {
+      "company_name": "18/18",
+      "business": "18/18",
+      "currency": "18/18",
+      "period": "18/18",
+      "revenue": "18/18",
+      "ebitda": "18/18",
+      "net_debt": "18/18",
+      "revenue_growth": "18/18",
+      "customer_concentration": "18/18"
+    },
+    "pipeline": {
+      "company_name": "17/17",
+      "business": "17/17",
+      "currency": "17/17",
+      "period": "17/17",
+      "revenue": "17/17",
+      "ebitda": "17/17",
+      "net_debt": "17/17",
+      "revenue_growth": "17/17",
+      "customer_concentration": "17/17"
+    }
+  },
+  "results": [
+    {
+      "file": "eval_01_solara_grid.txt",
+      "approach": "llm_only",
+      "seconds": 18.56,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1681,
+        "output_tokens": 2060
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Solara Grid plc",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Solara Grid plc (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal entity name."
+        },
+        {
+          "field": "business",
+          "value": "The group develops and operates utility-scale solar farms that sell electricity under long-term power purchase agreements.",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "The group develops and operates utility-scale solar farms that sell electricity under long-term power purchase agreements.",
+          "currency": null,
+          "period": null,
+          "note": "Company business description."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": "GBP",
+          "period": null,
+          "note": "Pounds sterling mapped to ISO code GBP."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "769100000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 769.1 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Turnover normalized from 769.1 million pounds sterling."
+        },
+        {
+          "field": "ebitda",
+          "value": "407600000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Operating profit before depreciation and amortisation was 407.6 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Reported operating profit before depreciation and amortisation (reported EBITDA), excluding adjusted EBITDA."
+        },
+        {
+          "field": "net_debt",
+          "value": "791200000",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "Borrowings less cash and cash equivalents stood at 791.2 million pounds sterling at 31 December 2024.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Stated as borrowings less cash and cash equivalents at period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "This was an increase of 17% on the prior year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Normalized from 17% increase on the prior year."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.12",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Our largest customer accounted for 12% of revenue.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Normalized from 12% of revenue."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_01_solara_grid.txt",
+      "approach": "pipeline",
+      "seconds": 27.83,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1406,
+        "output_tokens": 3167
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S002",
+          "S005",
+          "S008",
+          "S010",
+          "S011",
+          "S014"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Solara Grid plc",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Solara Grid plc (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Legal name of the company."
+        },
+        {
+          "field": "business",
+          "value": "The group develops and operates utility-scale solar farms that sell electricity under long-term power purchase agreements.",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "The group develops and operates utility-scale solar farms that sell electricity under long-term power purchase agreements.",
+          "currency": null,
+          "period": null,
+          "note": "Description of core business operations."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": "GBP",
+          "period": null,
+          "note": "Reporting currency is pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "769100000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 769.1 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Turnover normalized from 769.1 million pounds sterling."
+        },
+        {
+          "field": "ebitda",
+          "value": "407600000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Operating profit before depreciation and amortisation was 407.6 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Reported EBITDA prior to adjusting items."
+        },
+        {
+          "field": "net_debt",
+          "value": "791200000",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "Borrowings less cash and cash equivalents stood at 791.2 million pounds sterling at 31 December 2024.",
+          "currency": "GBP",
+          "period": "31 December 2024",
+          "note": "Net debt at reporting period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "This was an increase of 17% on the prior year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Annual revenue growth rate."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.12",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Our largest customer accounted for 12% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Share of revenue from largest single customer."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_02_northway_tollroads.txt",
+      "approach": "llm_only",
+      "seconds": 22.27,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1709,
+        "output_tokens": 2576
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Northway Tollroads Inc.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Northway Tollroads Inc. (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group operates tolled motorways and bridges under long-term government concessions.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "The group operates tolled motorways and bridges under long-term government concessions.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "CAD",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "All amounts in this review are presented in Canadian dollars.",
+          "currency": "CAD",
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2025",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "733300000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "The group generated sales of 733.3 million Canadian dollars during the period.",
+          "currency": "CAD",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "234700000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 234.7 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "1399000000",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "Borrowings less cash and cash equivalents stood at 1,399.0 million Canadian dollars at 31 December 2025.",
+          "currency": "CAD",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "That was 17% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Customer concentration is not mentioned in the provided text."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_02_northway_tollroads.txt",
+      "approach": "pipeline",
+      "seconds": 7.46,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1433,
+        "output_tokens": 701
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S003",
+          "S006",
+          "S009",
+          "S010",
+          "S011"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Northway Tollroads Inc.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Northway Tollroads Inc. (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "operates tolled motorways and bridges under long-term government concessions",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "The group operates tolled motorways and bridges under long-term government concessions.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "CAD",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "All amounts in this review are presented in Canadian dollars.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2025",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "733300000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "The group generated sales of 733.3 million Canadian dollars during the period.",
+          "currency": "CAD",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "234700000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 234.7 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "1399000000",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "Borrowings less cash and cash equivalents stood at 1,399.0 million Canadian dollars at 31 December 2025.",
+          "currency": "CAD",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "That was 17% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "No mention of customer concentration or largest single customer share in the provided passages."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_03_clearbrook_water.txt",
+      "approach": "llm_only",
+      "seconds": 21.89,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1652,
+        "output_tokens": 2531
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Clearbrook Water Inc.",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "The registered entity is Clearbrook Water Inc..",
+          "currency": null,
+          "period": null,
+          "note": "Legal entity name from passage S010."
+        },
+        {
+          "field": "business",
+          "value": "supplies drinking water and treats wastewater for regulated municipal customers",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "The group supplies drinking water and treats wastewater for regulated municipal customers.",
+          "currency": null,
+          "period": null,
+          "note": "Business activities description."
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": "AUD",
+          "period": null,
+          "note": "Reporting currency is Australian dollars (ISO code AUD)."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2025",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the twelve months ended 30 June 2025.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "789500000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Turnover for the period was 789.5 million Australian dollars.",
+          "currency": "AUD",
+          "period": "twelve months ended 30 June 2025",
+          "note": "Turnover for the period normalized from 789.5 million Australian dollars."
+        },
+        {
+          "field": "ebitda",
+          "value": "339500000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 339.5 million Australian dollars.",
+          "currency": "AUD",
+          "period": "twelve months ended 30 June 2025",
+          "note": "Reported EBITDA normalized from 339.5 million Australian dollars."
+        },
+        {
+          "field": "net_debt",
+          "value": "2730700000",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Borrowings less cash and cash equivalents stood at 2,730.7 million Australian dollars at 30 June 2025.",
+          "currency": "AUD",
+          "period": "30 June 2025",
+          "note": "Net debt (borrowings less cash and cash equivalents) normalized from 2,730.7 million Australian dollars at period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.08",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "This was an increase of 8% on the prior year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": "YoY turnover increase of 8% expressed as a decimal."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.29",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "29% of income came from one offtaker under a long-term contract.",
+          "currency": null,
+          "period": null,
+          "note": "Single customer concentration of 29% expressed as a decimal."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_03_clearbrook_water.txt",
+      "approach": "pipeline",
+      "seconds": 11.18,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1377,
+        "output_tokens": 1223
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S005",
+          "S006",
+          "S007",
+          "S008",
+          "S010",
+          "S014"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Clearbrook Water Inc.",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "The registered entity is Clearbrook Water Inc..",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal entity name from company description."
+        },
+        {
+          "field": "business",
+          "value": "supplies drinking water and treats wastewater for regulated municipal customers",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "The group supplies drinking water and treats wastewater for regulated municipal customers.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted primary business operations."
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting currency is Australian dollars (AUD)."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2025",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the twelve months ended 30 June 2025.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting period defined in basis of preparation."
+        },
+        {
+          "field": "revenue",
+          "value": "789500000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Turnover for the period was 789.5 million Australian dollars.",
+          "currency": "AUD",
+          "period": "twelve months ended 30 June 2025",
+          "note": "Turnover for the period normalized from 789.5 million Australian dollars."
+        },
+        {
+          "field": "ebitda",
+          "value": "339500000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 339.5 million Australian dollars.",
+          "currency": "AUD",
+          "period": "twelve months ended 30 June 2025",
+          "note": "Reported EBITDA normalized from 339.5 million Australian dollars."
+        },
+        {
+          "field": "net_debt",
+          "value": "2730700000",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Borrowings less cash and cash equivalents stood at 2,730.7 million Australian dollars at 30 June 2025.",
+          "currency": "AUD",
+          "period": "30 June 2025",
+          "note": "Borrowings less cash and cash equivalents normalized from 2,730.7 million Australian dollars."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.08",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "This was an increase of 8% on the prior year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": "Normalized from 8%."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.29",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "29% of income came from one offtaker under a long-term contract.",
+          "currency": null,
+          "period": null,
+          "note": "Normalized from 29%."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_04_meridian_ports.txt",
+      "approach": "llm_only",
+      "seconds": 19.23,
+      "passages_sent": 15,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1751,
+        "output_tokens": 2692
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Meridian Ports Group plc",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "The registered entity is Meridian Ports Group plc.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group runs container and bulk terminals at three deep-water harbours.",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "The group runs container and bulk terminals at three deep-water harbours.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in thousands of pounds sterling unless otherwise stated.",
+          "currency": "GBP",
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "753800000",
+          "status": "found",
+          "chunk_id": "S015",
+          "quote": "The group generated sales of 753,800 during the period.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "399500000",
+          "status": "found",
+          "chunk_id": "S015",
+          "quote": "Operating profit before depreciation and amortisation was 399,500.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "50900000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Net borrowings at 31 December 2024 were 50,900.",
+          "currency": "GBP",
+          "period": "31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.06",
+          "status": "found",
+          "chunk_id": "S015",
+          "quote": "Income was up 6% year on year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "Our largest customer accounted for 17% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_04_meridian_ports.txt",
+      "approach": "pipeline",
+      "seconds": 59.3,
+      "passages_sent": 11,
+      "passages_total": 15,
+      "usage": {},
+      "error": "HTTP 504: Deadline expired before operation could complete.",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S003",
+          "S005",
+          "S006",
+          "S012",
+          "S013",
+          "S014"
+        ]
+      },
+      "facts": []
+    },
+    {
+      "file": "eval_05_corelink_data_centres.txt",
+      "approach": "llm_only",
+      "seconds": 26.01,
+      "passages_sent": 15,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1726,
+        "output_tokens": 3262
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Corelink Data Centres Ltd",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "Corelink Data Centres Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Parent company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group builds and leases powered data-centre capacity to cloud and enterprise tenants.",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "The group builds and leases powered data-centre capacity to cloud and enterprise tenants.",
+          "currency": null,
+          "period": null,
+          "note": "Business description."
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": "EUR",
+          "period": null,
+          "note": "Reporting currency."
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2025",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "These results cover the financial year ended 31 March 2025.",
+          "currency": null,
+          "period": "financial year ended 31 March 2025",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "755000000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 755.0 million euros.",
+          "currency": "EUR",
+          "period": "financial year ended 31 March 2025",
+          "note": "Reported turnover for the period."
+        },
+        {
+          "field": "ebitda",
+          "value": "256700000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "EBITDA for the period was 256.7 million euros.",
+          "currency": "EUR",
+          "period": "financial year ended 31 March 2025",
+          "note": "Reported EBITDA for the period."
+        },
+        {
+          "field": "net_debt",
+          "value": "1709000000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Net debt at 31 March 2025 was 1,709.0 million euros.",
+          "currency": "EUR",
+          "period": "financial year ended 31 March 2025",
+          "note": "Net debt at the reporting period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Annual revenue growth percentage is not reported."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.24",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Our largest customer accounted for 24% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Share of revenue from largest customer."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": null
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_05_corelink_data_centres.txt",
+      "approach": "pipeline",
+      "seconds": 25.52,
+      "passages_sent": 13,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1543,
+        "output_tokens": 3187
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 13,
+        "added_by_embeddings": [
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S011"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Corelink Data Centres Ltd",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "Corelink Data Centres Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Parent company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group builds and leases powered data-centre capacity to cloud and enterprise tenants.",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "The group builds and leases powered data-centre capacity to cloud and enterprise tenants.",
+          "currency": null,
+          "period": null,
+          "note": "Core business activities."
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": "EUR",
+          "period": null,
+          "note": "Reporting currency is euros."
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2025",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "These results cover the financial year ended 31 March 2025.",
+          "currency": null,
+          "period": "financial year ended 31 March 2025",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "755000000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 755.0 million euros.",
+          "currency": "EUR",
+          "period": "financial year ended 31 March 2025",
+          "note": "Turnover for the annual reporting period."
+        },
+        {
+          "field": "ebitda",
+          "value": "256700000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "EBITDA for the period was 256.7 million euros.",
+          "currency": "EUR",
+          "period": "financial year ended 31 March 2025",
+          "note": "Reported EBITDA for the annual reporting period."
+        },
+        {
+          "field": "net_debt",
+          "value": "1709000000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Net debt at 31 March 2025 was 1,709.0 million euros.",
+          "currency": "EUR",
+          "period": "31 March 2025",
+          "note": "Net debt at the reporting period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Annual revenue growth rate is not reported in the provided passages."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.24",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Our largest customer accounted for 24% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Largest customer share of revenue."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": null
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_06_heatwell_district_energy.txt",
+      "approach": "llm_only",
+      "seconds": 44.17,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1701,
+        "output_tokens": 5394
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Heatwell District Energy plc",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Heatwell District Energy plc is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Parent company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group owns district heating networks that supply hot water to homes and offices.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group owns district heating networks that supply hot water to homes and offices.",
+          "currency": null,
+          "period": null,
+          "note": "Description of business activities."
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": "AUD",
+          "period": null,
+          "note": "Reporting currency is Australian dollars (AUD)."
+        },
+        {
+          "field": "period",
+          "value": "2025",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": "2025",
+          "note": "Financial year ended 31 December 2025."
+        },
+        {
+          "field": "revenue",
+          "value": "400200000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Total income from operations reached 400.2 million Australian dollars.",
+          "currency": "AUD",
+          "period": "2025",
+          "note": "Reported total income from operations."
+        },
+        {
+          "field": "ebitda",
+          "value": "108100000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 108.1 million Australian dollars.",
+          "currency": "AUD",
+          "period": "2025",
+          "note": "Reported EBITDA."
+        },
+        {
+          "field": "net_debt",
+          "value": "-71300000",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "At 31 December 2025, cash exceeded borrowings, giving a net cash position of 71.3 million Australian dollars.",
+          "currency": "AUD",
+          "period": "2025",
+          "note": "Net cash position of 71.3 million AUD corresponds to -71300000 AUD net debt."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.07",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "That was 7% higher than the previous year.",
+          "currency": null,
+          "period": "2025",
+          "note": "Year-over-year operational income growth."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "No customer concentration information was disclosed in the text."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_06_heatwell_district_energy.txt",
+      "approach": "pipeline",
+      "seconds": 31.35,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1431,
+        "output_tokens": 3512
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S003",
+          "S005",
+          "S006",
+          "S007",
+          "S010"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Heatwell District Energy plc",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Heatwell District Energy plc is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Legal parent entity name."
+        },
+        {
+          "field": "business",
+          "value": "The group owns district heating networks that supply hot water to homes and offices.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group owns district heating networks that supply hot water to homes and offices.",
+          "currency": null,
+          "period": null,
+          "note": "Description of operations and core services."
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": "AUD",
+          "period": null,
+          "note": "Reporting currency specified as Australian dollars."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2025",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": "year ended 31 December 2025",
+          "note": "Annual completed reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "400200000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Total income from operations reached 400.2 million Australian dollars.",
+          "currency": "AUD",
+          "period": "year ended 31 December 2025",
+          "note": "Reported as total income from operations."
+        },
+        {
+          "field": "ebitda",
+          "value": "108100000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 108.1 million Australian dollars.",
+          "currency": "AUD",
+          "period": "year ended 31 December 2025",
+          "note": "Reported EBITDA."
+        },
+        {
+          "field": "net_debt",
+          "value": "-71300000",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "At 31 December 2025, cash exceeded borrowings, giving a net cash position of 71.3 million Australian dollars.",
+          "currency": "AUD",
+          "period": "31 December 2025",
+          "note": "Net cash position corresponds to negative net debt."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.07",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "That was 7% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2025",
+          "note": "Year-over-year operational income growth rate."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Customer concentration percentage is not disclosed."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_07_ironline_rail_freight.txt",
+      "approach": "llm_only",
+      "seconds": 23.01,
+      "passages_sent": 13,
+      "passages_total": 13,
+      "usage": {
+        "input_tokens": 1581,
+        "output_tokens": 2669
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Ironline Rail Freight Ltd.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "The registered entity is Ironline Rail Freight Ltd.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal entity name."
+        },
+        {
+          "field": "business",
+          "value": "The group operates rail freight terminals and wagon fleets for bulk and intermodal cargo.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "The group operates rail freight terminals and wagon fleets for bulk and intermodal cargo.",
+          "currency": null,
+          "period": null,
+          "note": "Description of core business operations and services."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": "GBP",
+          "period": null,
+          "note": "Reporting currency is pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2025",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "These results cover the twelve months ended 30 June 2025.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": "Financial reporting annual period."
+        },
+        {
+          "field": "revenue",
+          "value": "276700000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Total income from operations reached 276.7 million pounds sterling.",
+          "currency": "GBP",
+          "period": "twelve months ended 30 June 2025",
+          "note": "Reported as total income from operations."
+        },
+        {
+          "field": "ebitda",
+          "value": "160500000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Operating profit before depreciation and amortisation was 160.5 million pounds sterling.",
+          "currency": "GBP",
+          "period": "twelve months ended 30 June 2025",
+          "note": "Reported operating profit before depreciation and amortisation; adjusted EBITDA excluded."
+        },
+        {
+          "field": "net_debt",
+          "value": "2615600000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Borrowings less cash and cash equivalents stood at 2,615.6 million pounds sterling at 30 June 2025.",
+          "currency": "GBP",
+          "period": "30 June 2025",
+          "note": "Net debt reported as borrowings less cash and cash equivalents at period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.18",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "This was an increase of 18% on the prior year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": "Annual year-over-year revenue growth."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.29",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "29% of income came from one offtaker under a long-term contract.",
+          "currency": null,
+          "period": null,
+          "note": "Share of income from the largest single customer/offtaker."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_07_ironline_rail_freight.txt",
+      "approach": "pipeline",
+      "seconds": 19.65,
+      "passages_sent": 12,
+      "passages_total": 13,
+      "usage": {
+        "input_tokens": 1484,
+        "output_tokens": 2568
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S004",
+          "S006",
+          "S007",
+          "S008",
+          "S011",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Ironline Rail Freight Ltd.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "The registered entity is Ironline Rail Freight Ltd.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group operates rail freight terminals and wagon fleets for bulk and intermodal cargo.",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "The group operates rail freight terminals and wagon fleets for bulk and intermodal cargo.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2025",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "These results cover the twelve months ended 30 June 2025.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "276700000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Total income from operations reached 276.7 million pounds sterling.",
+          "currency": "GBP",
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "160500000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Operating profit before depreciation and amortisation was 160.5 million pounds sterling.",
+          "currency": "GBP",
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "2615600000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Borrowings less cash and cash equivalents stood at 2,615.6 million pounds sterling at 30 June 2025.",
+          "currency": "GBP",
+          "period": "30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.18",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "This was an increase of 18% on the prior year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.29",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "29% of income came from one offtaker under a long-term contract.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_08_skyharbour_airports.txt",
+      "approach": "llm_only",
+      "seconds": 24.15,
+      "passages_sent": 12,
+      "passages_total": 12,
+      "usage": {
+        "input_tokens": 1477,
+        "output_tokens": 2865
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Skyharbour Airports plc",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Skyharbour Airports plc is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal name from passage S008."
+        },
+        {
+          "field": "business",
+          "value": "The group owns and operates two regional airports and their retail concessions.",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "The group owns and operates two regional airports and their retail concessions.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted description of business and operations."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "All amounts in this review are presented in thousands of pounds sterling unless otherwise stated.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting currency is pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2024",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "These results cover the financial year ended 31 March 2024.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting period is the financial year ended 31 March 2024."
+        },
+        {
+          "field": "revenue",
+          "value": "254100000",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Revenues amounted to 254,100 for the period.",
+          "currency": "GBP",
+          "period": "financial year ended 31 March 2024",
+          "note": "Reported in thousands of pounds sterling (254,100 thousand)."
+        },
+        {
+          "field": "ebitda",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Reported EBITDA is not disclosed; only adjusted EBITDA of 117,900 thousand is reported in S011."
+        },
+        {
+          "field": "net_debt",
+          "value": "911900000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Borrowings less cash and cash equivalents stood at 911,900 at 31 March 2024.",
+          "currency": "GBP",
+          "period": "31 March 2024",
+          "note": "Net debt (borrowings less cash and cash equivalents) stated in thousands of pounds sterling as of 31 March 2024."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.18",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "This was an increase of 18% on the prior year.",
+          "currency": null,
+          "period": null,
+          "note": "Revenue increased by 18% compared to the prior year."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.16",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "Our largest customer accounted for 16% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Largest customer accounted for 16% of revenue."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": null
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "blocked_correctly"
+      }
+    },
+    {
+      "file": "eval_08_skyharbour_airports.txt",
+      "approach": "pipeline",
+      "seconds": 35.07,
+      "passages_sent": 11,
+      "passages_total": 12,
+      "usage": {
+        "input_tokens": 1380,
+        "output_tokens": 3953
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S003",
+          "S004",
+          "S007",
+          "S010",
+          "S011",
+          "S012"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Skyharbour Airports plc",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Skyharbour Airports plc is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Parent company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group owns and operates two regional airports and their retail concessions.",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "The group owns and operates two regional airports and their retail concessions.",
+          "currency": null,
+          "period": null,
+          "note": "Principal activities of the group."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "All amounts in this review are presented in thousands of pounds sterling unless otherwise stated.",
+          "currency": "GBP",
+          "period": null,
+          "note": "Reporting currency is pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2024",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "These results cover the financial year ended 31 March 2024.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "254100000",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Revenues amounted to 254,100 for the period.",
+          "currency": "GBP",
+          "period": "financial year ended 31 March 2024",
+          "note": "Normalized from 254,100 thousand pounds sterling."
+        },
+        {
+          "field": "ebitda",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Only adjusted EBITDA is reported (117,900 thousand); reported EBITDA is not provided."
+        },
+        {
+          "field": "net_debt",
+          "value": "911900000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Borrowings less cash and cash equivalents stood at 911,900 at 31 March 2024.",
+          "currency": "GBP",
+          "period": "financial year ended 31 March 2024",
+          "note": "Normalized from 911,900 thousand pounds sterling."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.18",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "This was an increase of 18% on the prior year.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Annual year-over-year revenue growth of 18%."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.16",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "Our largest customer accounted for 16% of revenue.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Largest customer share of revenue."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": null
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "blocked_correctly"
+      }
+    },
+    {
+      "file": "eval_09_gale_point_wind.txt",
+      "approach": "llm_only",
+      "seconds": 35.64,
+      "passages_sent": 13,
+      "passages_total": 13,
+      "usage": {
+        "input_tokens": 1538,
+        "output_tokens": 3645
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Gale Point Wind Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Gale Point Wind Holdings Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group owns onshore and offshore wind farms with contracted and merchant revenue.",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "The group owns onshore and offshore wind farms with contracted and merchant revenue.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2025",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "These results cover the twelve months ended 30 June 2025.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "275600000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Revenues amounted to 275.6 million euros for the period.",
+          "currency": "EUR",
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "157100000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 157.1 million euros.",
+          "currency": "EUR",
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "2237800000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Net borrowings at 30 June 2025 were 2,237.8 million euros.",
+          "currency": "EUR",
+          "period": "30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.13",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "That was 13% higher than the previous year.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.28",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "The single biggest client represented 28% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_09_gale_point_wind.txt",
+      "approach": "pipeline",
+      "seconds": 17.98,
+      "passages_sent": 12,
+      "passages_total": 13,
+      "usage": {
+        "input_tokens": 1452,
+        "output_tokens": 2566
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S005",
+          "S009",
+          "S010",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Gale Point Wind Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Gale Point Wind Holdings Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group owns onshore and offshore wind farms with contracted and merchant revenue.",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "The group owns onshore and offshore wind farms with contracted and merchant revenue.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2025",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "These results cover the twelve months ended 30 June 2025.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "275600000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Revenues amounted to 275.6 million euros for the period.",
+          "currency": "EUR",
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "157100000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 157.1 million euros.",
+          "currency": "EUR",
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "2237800000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Net borrowings at 30 June 2025 were 2,237.8 million euros.",
+          "currency": "EUR",
+          "period": "30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.13",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Revenues amounted to 275.6 million euros for the period. That was 13% higher than the previous year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2025",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.28",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "The single biggest client represented 28% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_10_brightfibre_networks.txt",
+      "approach": "llm_only",
+      "seconds": 26.52,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1726,
+        "output_tokens": 3366
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Brightfibre Networks plc",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Brightfibre Networks plc (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group builds and wholesales full-fibre broadband networks to internet providers.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group builds and wholesales full-fibre broadband networks to internet providers.",
+          "currency": null,
+          "period": null,
+          "note": "Description of business operations and products/services."
+        },
+        {
+          "field": "currency",
+          "value": "CAD",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "All amounts in this review are presented in Canadian dollars.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting currency stated as Canadian dollars."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2024",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "These results cover the twelve months ended 30 June 2024.",
+          "currency": null,
+          "period": null,
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "760400000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Total income from operations reached 760.4 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Total income from operations reported for the annual period."
+        },
+        {
+          "field": "ebitda",
+          "value": "372600000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 372.6 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Reported EBITDA, excluding adjusted EBITDA."
+        },
+        {
+          "field": "net_debt",
+          "value": "789100000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Net debt at 30 June 2024 was 789.1 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "30 June 2024",
+          "note": "Net debt at period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.14",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "This was an increase of 14% on the prior year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Year-over-year revenue increase of 14%."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Customer concentration percentage is not disclosed."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_10_brightfibre_networks.txt",
+      "approach": "pipeline",
+      "seconds": 27.25,
+      "passages_sent": 12,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1542,
+        "output_tokens": 3119
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S002",
+          "S011",
+          "S013",
+          "S014"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Brightfibre Networks plc",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Brightfibre Networks plc (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Legal company name."
+        },
+        {
+          "field": "business",
+          "value": "The group builds and wholesales full-fibre broadband networks to internet providers.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group builds and wholesales full-fibre broadband networks to internet providers.",
+          "currency": null,
+          "period": null,
+          "note": "Description of business activities and services."
+        },
+        {
+          "field": "currency",
+          "value": "CAD",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "All amounts in this review are presented in Canadian dollars.",
+          "currency": "CAD",
+          "period": null,
+          "note": "Presentation currency is Canadian dollars (CAD)."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2024",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "These results cover the twelve months ended 30 June 2024.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "760400000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Total income from operations reached 760.4 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from 760.4 million Canadian dollars."
+        },
+        {
+          "field": "ebitda",
+          "value": "372600000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 372.6 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from reported EBITDA of 372.6 million Canadian dollars."
+        },
+        {
+          "field": "net_debt",
+          "value": "789100000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Net debt at 30 June 2024 was 789.1 million Canadian dollars.",
+          "currency": "CAD",
+          "period": "30 June 2024",
+          "note": "Normalized from 789.1 million Canadian dollars at reporting period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.14",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "This was an increase of 14% on the prior year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from 14% increase on the prior year."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "No customer concentration information was disclosed in the passages."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_11_keystone_pipelines.txt",
+      "approach": "llm_only",
+      "seconds": 7.4,
+      "passages_sent": 15,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1740,
+        "output_tokens": 791
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Keystone Pipelines plc",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "Keystone Pipelines plc (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Legal company name."
+        },
+        {
+          "field": "business",
+          "value": "transports natural gas through regulated high-pressure pipelines",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "The group transports natural gas through regulated high-pressure pipelines.",
+          "currency": null,
+          "period": null,
+          "note": "Description of business operations."
+        },
+        {
+          "field": "currency",
+          "value": "USD",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "All amounts in this review are presented in US dollars.",
+          "currency": "USD",
+          "period": null,
+          "note": "Presentation currency is US dollars (USD)."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2024",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "These results cover the twelve months ended 30 June 2024.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Financial reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "175500000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group generated sales of 175.5 million US dollars during the period.",
+          "currency": "USD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from 175.5 million US dollars."
+        },
+        {
+          "field": "ebitda",
+          "value": "100000000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Operating profit before depreciation and amortisation was 100.0 million US dollars.",
+          "currency": "USD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Reported operating profit before depreciation and amortisation (EBITDA), normalized from 100.0 million US dollars."
+        },
+        {
+          "field": "net_debt",
+          "value": "2829900000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Net borrowings at 30 June 2024 were 2,829.9 million US dollars.",
+          "currency": "USD",
+          "period": "at 30 June 2024",
+          "note": "Net borrowings at reporting period end, normalized from 2,829.9 million US dollars."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.09",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Income was up 9% year on year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from 9%."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.21",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "The single biggest client represented 21% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": "Normalized from 21%."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_11_keystone_pipelines.txt",
+      "approach": "pipeline",
+      "seconds": 31.43,
+      "passages_sent": 13,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1556,
+        "output_tokens": 2485
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 13,
+        "added_by_embeddings": [
+          "S005",
+          "S007",
+          "S008",
+          "S010",
+          "S012"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Keystone Pipelines plc",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "Keystone Pipelines plc (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal entity name from company description."
+        },
+        {
+          "field": "business",
+          "value": "The group transports natural gas through regulated high-pressure pipelines.",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "The group transports natural gas through regulated high-pressure pipelines.",
+          "currency": null,
+          "period": null,
+          "note": "Primary business description from Who We Are section."
+        },
+        {
+          "field": "currency",
+          "value": "USD",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "All amounts in this review are presented in US dollars.",
+          "currency": "USD",
+          "period": null,
+          "note": "Reporting currency stated in Basis of Preparation."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2024",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "These results cover the twelve months ended 30 June 2024.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "175500000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group generated sales of 175.5 million US dollars during the period.",
+          "currency": "USD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from 175.5 million US dollars sales."
+        },
+        {
+          "field": "ebitda",
+          "value": "100000000",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Operating profit before depreciation and amortisation was 100.0 million US dollars.",
+          "currency": "USD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Reported operating profit before depreciation and amortisation normalized from 100.0 million US dollars."
+        },
+        {
+          "field": "net_debt",
+          "value": "2829900000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Net borrowings at 30 June 2024 were 2,829.9 million US dollars.",
+          "currency": "USD",
+          "period": "30 June 2024",
+          "note": "Net borrowings at period end normalized from 2,829.9 million US dollars."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.09",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Income was up 9% year on year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Normalized from 9% year on year."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.21",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "The single biggest client represented 21% of turnover.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Single biggest client share normalized from 21%."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_12_renew_cycle_energy.txt",
+      "approach": "llm_only",
+      "seconds": 58.45,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {},
+      "error": "HTTP 504: Deadline expired before operation could complete.",
+      "retrieval": {},
+      "facts": []
+    },
+    {
+      "file": "eval_12_renew_cycle_energy.txt",
+      "approach": "pipeline",
+      "seconds": 53.17,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1372,
+        "output_tokens": 6198
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S003",
+          "S004",
+          "S005",
+          "S007",
+          "S010",
+          "S012"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Renew Cycle Energy Ltd",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "Renew Cycle Energy Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Parent company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group converts household waste into electricity and heat at energy-from-waste plants.",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "The group converts household waste into electricity and heat at energy-from-waste plants.",
+          "currency": null,
+          "period": null,
+          "note": "Business activities of the group."
+        },
+        {
+          "field": "currency",
+          "value": "USD",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "All amounts in this review are presented in thousands of US dollars unless otherwise stated.",
+          "currency": "USD",
+          "period": null,
+          "note": "Reporting currency is US dollars."
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2024",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "These results cover the financial year ended 31 March 2024.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "435700000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Total income from operations reached 435,700.",
+          "currency": "USD",
+          "period": "financial year ended 31 March 2024",
+          "note": "Total income from operations of 435,700 thousand USD normalized to full units."
+        },
+        {
+          "field": "ebitda",
+          "value": "265800000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Operating profit before depreciation and amortisation was 265,800.",
+          "currency": "USD",
+          "period": "financial year ended 31 March 2024",
+          "note": "Operating profit before depreciation and amortisation of 265,800 thousand USD normalized to full units."
+        },
+        {
+          "field": "net_debt",
+          "value": "151200000",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "Net debt at 31 March 2024 was 151,200.",
+          "currency": "USD",
+          "period": "31 March 2024",
+          "note": "Net debt at reporting period end of 151,200 thousand USD normalized to full units."
+        },
+        {
+          "field": "revenue_growth",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Annual year-over-year revenue growth percentage is not stated in the text."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.37",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Our largest customer accounted for 37% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Largest customer share normalized to decimal."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": null
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_13_voltway_charging.txt",
+      "approach": "llm_only",
+      "seconds": 28.4,
+      "passages_sent": 15,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1777,
+        "output_tokens": 3028
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "VoltWay Charging Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "VoltWay Charging Holdings Ltd (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Legal name of the company."
+        },
+        {
+          "field": "business",
+          "value": "The group installs and operates rapid electric-vehicle charging hubs.",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "The group installs and operates rapid electric-vehicle charging hubs.",
+          "currency": null,
+          "period": null,
+          "note": "Description of business and activities."
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": "EUR",
+          "period": null,
+          "note": "Presentation currency is euros (EUR)."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "595500000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 595.5 million euros.",
+          "currency": "EUR",
+          "period": "year ended 31 December 2024",
+          "note": "Reported turnover normalized to full currency units."
+        },
+        {
+          "field": "ebitda",
+          "value": "208400000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "EBITDA for the period was 208.4 million euros.",
+          "currency": "EUR",
+          "period": "year ended 31 December 2024",
+          "note": "Reported EBITDA normalized to full currency units."
+        },
+        {
+          "field": "net_debt",
+          "value": "98100000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "Borrowings less cash and cash equivalents stood at 98.1 million euros at 31 December 2024.",
+          "currency": "EUR",
+          "period": "31 December 2024",
+          "note": "Net debt (borrowings less cash and cash equivalents) at period end normalized to full currency units."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.06",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 595.5 million euros. That was 6% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Year-over-year revenue growth converted from 6% to decimal."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.19",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Our largest customer accounted for 19% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Largest customer share converted from 19% to decimal."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_13_voltway_charging.txt",
+      "approach": "pipeline",
+      "seconds": 17.84,
+      "passages_sent": 12,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1502,
+        "output_tokens": 2377
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S004",
+          "S011",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "VoltWay Charging Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "VoltWay Charging Holdings Ltd (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "installs and operates rapid electric-vehicle charging hubs",
+          "status": "found",
+          "chunk_id": "S014",
+          "quote": "The group installs and operates rapid electric-vehicle charging hubs.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S012",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "595500000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Turnover for the period was 595.5 million euros.",
+          "currency": "EUR",
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "208400000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "EBITDA for the period was 208.4 million euros.",
+          "currency": "EUR",
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "98100000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "Borrowings less cash and cash equivalents stood at 98.1 million euros at 31 December 2024.",
+          "currency": "EUR",
+          "period": "31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.06",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "That was 6% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.19",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Our largest customer accounted for 19% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_14_steadfast_storage.txt",
+      "approach": "llm_only",
+      "seconds": 19.35,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1676,
+        "output_tokens": 2740
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Steadfast Storage Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The registered entity is Steadfast Storage Holdings Ltd.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal entity name."
+        },
+        {
+          "field": "business",
+          "value": "operates grid-scale battery storage sites that provide balancing services",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The group operates grid-scale battery storage sites that provide balancing services.",
+          "currency": null,
+          "period": null,
+          "note": "Group core business operations description."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": "GBP",
+          "period": null,
+          "note": "Reporting currency stated as pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "223900000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Revenues amounted to 223.9 million pounds sterling for the period.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Normalized from 223.9 million pounds sterling."
+        },
+        {
+          "field": "ebitda",
+          "value": "98500000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 98.5 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Reported EBITDA normalized from 98.5 million pounds sterling."
+        },
+        {
+          "field": "net_debt",
+          "value": "874300000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Borrowings less cash and cash equivalents stood at 874.3 million pounds sterling at 31 December 2024.",
+          "currency": "GBP",
+          "period": "31 December 2024",
+          "note": "Net debt (borrowings less cash and cash equivalents) normalized from 874.3 million pounds sterling at reporting period end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Revenues amounted to 223.9 million pounds sterling for the period. That was 17% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Year-over-year revenue growth normalized from 17%."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "No customer concentration information was disclosed in the retrieved passages."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_14_steadfast_storage.txt",
+      "approach": "pipeline",
+      "seconds": 22.11,
+      "passages_sent": 12,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1493,
+        "output_tokens": 2861
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S004",
+          "S006",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S014"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Steadfast Storage Holdings Ltd.",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The registered entity is Steadfast Storage Holdings Ltd.",
+          "currency": null,
+          "period": null,
+          "note": "Legal entity name of the company."
+        },
+        {
+          "field": "business",
+          "value": "The group operates grid-scale battery storage sites that provide balancing services.",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The group operates grid-scale battery storage sites that provide balancing services.",
+          "currency": null,
+          "period": null,
+          "note": "Core business activities and services description."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": "GBP",
+          "period": null,
+          "note": "Reporting currency is pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "223900000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Revenues amounted to 223.9 million pounds sterling for the period.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Annual revenue normalized to full units."
+        },
+        {
+          "field": "ebitda",
+          "value": "98500000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 98.5 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Reported EBITDA normalized to full units."
+        },
+        {
+          "field": "net_debt",
+          "value": "874300000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Borrowings less cash and cash equivalents stood at 874.3 million pounds sterling at 31 December 2024.",
+          "currency": "GBP",
+          "period": "31 December 2024",
+          "note": "Borrowings less cash and cash equivalents at period end normalized to full units."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.17",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "That was 17% higher than the previous year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Year-over-year revenue growth converted to decimal format."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Customer concentration data is not reported in the retrieved passages."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_15_riverfall_hydro.txt",
+      "approach": "llm_only",
+      "seconds": 41.38,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1654,
+        "output_tokens": 5018
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Riverfall Hydro Inc.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Riverfall Hydro Inc. is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group owns run-of-river hydroelectric plants with long-dated offtake contracts.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group owns run-of-river hydroelectric plants with long-dated offtake contracts.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2025",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "623500000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Revenues amounted to 623.5 million euros for the period.",
+          "currency": "EUR",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "374100000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 374.1 million euros.",
+          "currency": "EUR",
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "-84000000",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "At 31 December 2025, cash exceeded borrowings, giving a net cash position of 84.0 million euros.",
+          "currency": "EUR",
+          "period": "31 December 2025",
+          "note": "Reported as net cash position of 84.0 million euros."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.06",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Income was up 6% year on year.",
+          "currency": null,
+          "period": "year ended 31 December 2025",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.19",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The single biggest client represented 19% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_15_riverfall_hydro.txt",
+      "approach": "pipeline",
+      "seconds": 52.22,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1381,
+        "output_tokens": 6056
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S002",
+          "S006",
+          "S007",
+          "S010",
+          "S011",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Riverfall Hydro Inc.",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "Riverfall Hydro Inc. is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Legal entity name of the parent company."
+        },
+        {
+          "field": "business",
+          "value": "owns run-of-river hydroelectric plants with long-dated offtake contracts",
+          "status": "found",
+          "chunk_id": "S009",
+          "quote": "The group owns run-of-river hydroelectric plants with long-dated offtake contracts.",
+          "currency": null,
+          "period": null,
+          "note": "Description of business operations and assets."
+        },
+        {
+          "field": "currency",
+          "value": "EUR",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "All amounts in this review are presented in euros.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting currency presented in euros (ISO code EUR)."
+        },
+        {
+          "field": "period",
+          "value": "2025",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": null,
+          "note": "Latest completed annual financial reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "623500000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Revenues amounted to 623.5 million euros for the period.",
+          "currency": "EUR",
+          "period": "2025",
+          "note": "Revenues for the period normalized from 623.5 million euros."
+        },
+        {
+          "field": "ebitda",
+          "value": "374100000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Earnings before interest, tax, depreciation and amortisation totalled 374.1 million euros.",
+          "currency": "EUR",
+          "period": "2025",
+          "note": "Reported EBITDA normalized from 374.1 million euros."
+        },
+        {
+          "field": "net_debt",
+          "value": "-84000000",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "At 31 December 2025, cash exceeded borrowings, giving a net cash position of 84.0 million euros.",
+          "currency": "EUR",
+          "period": "31 December 2025",
+          "note": "Net cash position of 84.0 million euros expressed as negative net debt."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.06",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Income was up 6% year on year.",
+          "currency": null,
+          "period": "2025",
+          "note": "Reported as income up 6% year on year, normalized to decimal."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.19",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The single biggest client represented 19% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": "Single biggest client share of turnover normalized to decimal."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "blocked_unnecessarily"
+      }
+    },
+    {
+      "file": "eval_16_coastline_desalination.txt",
+      "approach": "llm_only",
+      "seconds": 26.1,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1664,
+        "output_tokens": 2985
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Coastline Desalination Inc.",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Coastline Desalination Inc. is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group operates seawater desalination plants under availability-based contracts.",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The group operates seawater desalination plants under availability-based contracts.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "USD",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "All amounts in this review are presented in thousands of US dollars unless otherwise stated.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "277900000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Revenues amounted to 277,900 for the period.",
+          "currency": "USD",
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "125100000",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "EBITDA for the period was 125,100.",
+          "currency": "USD",
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "63200000",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "Net debt at 31 December 2024 was 63,200.",
+          "currency": "USD",
+          "period": "31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.1",
+          "status": "found",
+          "chunk_id": "S007",
+          "quote": "Income was up 10% year on year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.25",
+          "status": "found",
+          "chunk_id": "S002",
+          "quote": "25% of income came from one offtaker under a long-term contract.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_16_coastline_desalination.txt",
+      "approach": "pipeline",
+      "seconds": 59.49,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {},
+      "error": "HTTP 504: Deadline expired before operation could complete.",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S007",
+          "S008",
+          "S013",
+          "S014"
+        ]
+      },
+      "facts": []
+    },
+    {
+      "file": "eval_17_metroline_transit.txt",
+      "approach": "llm_only",
+      "seconds": 21.61,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1671,
+        "output_tokens": 2084
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Metroline Transit Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "Metroline Transit Holdings Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": "Legal name of the parent company."
+        },
+        {
+          "field": "business",
+          "value": "The group operates light-rail systems under public-private partnership agreements.",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "The group operates light-rail systems under public-private partnership agreements.",
+          "currency": null,
+          "period": null,
+          "note": "Description of operations and business model."
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": "AUD",
+          "period": null,
+          "note": "Presentation currency is Australian dollars."
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2024",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "These results cover the twelve months ended 30 June 2024.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "639100000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "The group generated sales of 639.1 million Australian dollars during the period.",
+          "currency": "AUD",
+          "period": "twelve months ended 30 June 2024",
+          "note": "Annual sales for the period normalized from 639.1 million Australian dollars."
+        },
+        {
+          "field": "ebitda",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Reported EBITDA is not disclosed; only Adjusted EBITDA (307.7 million Australian dollars) is reported in S006."
+        },
+        {
+          "field": "net_debt",
+          "value": "1046400000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Borrowings less cash and cash equivalents stood at 1,046.4 million Australian dollars at 30 June 2024.",
+          "currency": "AUD",
+          "period": "30 June 2024",
+          "note": "Net debt (borrowings less cash and cash equivalents) at period end normalized from 1,046.4 million Australian dollars."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.12",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "That was 12% higher than the previous year.",
+          "currency": null,
+          "period": "twelve months ended 30 June 2024",
+          "note": "Annual year-over-year revenue growth of 12% normalized to decimal."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.42",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Our largest customer accounted for 42% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": "Largest single customer share of revenue normalized to decimal."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": null
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "blocked_correctly"
+      }
+    },
+    {
+      "file": "eval_17_metroline_transit.txt",
+      "approach": "pipeline",
+      "seconds": 32.16,
+      "passages_sent": 12,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1481,
+        "output_tokens": 4247
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S007",
+          "S008",
+          "S010",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Metroline Transit Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "Metroline Transit Holdings Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "operates light-rail systems under public-private partnership agreements",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "The group operates light-rail systems under public-private partnership agreements.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "twelve months ended 30 June 2024",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "These results cover the twelve months ended 30 June 2024.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "639100000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "The group generated sales of 639.1 million Australian dollars during the period.",
+          "currency": "AUD",
+          "period": "twelve months ended 30 June 2024",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "Only adjusted EBITDA is reported; reported EBITDA is not provided."
+        },
+        {
+          "field": "net_debt",
+          "value": "1046400000",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Borrowings less cash and cash equivalents stood at 1,046.4 million Australian dollars at 30 June 2024.",
+          "currency": "AUD",
+          "period": "30 June 2024",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.12",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "That was 12% higher than the previous year.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.42",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Our largest customer accounted for 42% of revenue.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": null
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "blocked_correctly"
+      }
+    },
+    {
+      "file": "eval_18_granite_towers.txt",
+      "approach": "llm_only",
+      "seconds": 31.84,
+      "passages_sent": 13,
+      "passages_total": 13,
+      "usage": {
+        "input_tokens": 1619,
+        "output_tokens": 3330
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Granite Towers Inc.",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Granite Towers Inc. (the Company) heads the group described in this review.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted legal entity name from company description."
+        },
+        {
+          "field": "business",
+          "value": "owns telecom towers and leases space to mobile network operators",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "The group owns telecom towers and leases space to mobile network operators.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted business description."
+        },
+        {
+          "field": "currency",
+          "value": "GBP",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "All amounts in this review are presented in pounds sterling.",
+          "currency": "GBP",
+          "period": null,
+          "note": "All amounts reported in pounds sterling (GBP)."
+        },
+        {
+          "field": "period",
+          "value": "year ended 31 December 2024",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "These results cover the year ended 31 December 2024.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Reporting annual period."
+        },
+        {
+          "field": "revenue",
+          "value": "365600000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Turnover for the period was 365.6 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Turnover normalized from 365.6 million pounds sterling."
+        },
+        {
+          "field": "ebitda",
+          "value": "212000000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Operating profit before depreciation and amortisation was 212.0 million pounds sterling.",
+          "currency": "GBP",
+          "period": "year ended 31 December 2024",
+          "note": "Reported operating profit before depreciation and amortisation normalized from 212.0 million pounds sterling."
+        },
+        {
+          "field": "net_debt",
+          "value": "1710700000",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "Borrowings less cash and cash equivalents stood at 1,710.7 million pounds sterling at 31 December 2024.",
+          "currency": "GBP",
+          "period": "31 December 2024",
+          "note": "Borrowings less cash and cash equivalents normalized from 1,710.7 million pounds sterling at year end."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.1",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Income was up 10% year on year.",
+          "currency": null,
+          "period": "year ended 31 December 2024",
+          "note": "Reported annual year-over-year income growth normalized from 10%."
+        },
+        {
+          "field": "customer_concentration",
+          "value": null,
+          "status": "missing",
+          "chunk_id": null,
+          "quote": null,
+          "currency": null,
+          "period": null,
+          "note": "No information regarding customer concentration was found in the text."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": null
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_18_granite_towers.txt",
+      "approach": "pipeline",
+      "seconds": 59.1,
+      "passages_sent": 11,
+      "passages_total": 13,
+      "usage": {},
+      "error": "HTTP 504: Deadline expired before operation could complete.",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S004",
+          "S008",
+          "S009",
+          "S010",
+          "S012"
+        ]
+      },
+      "facts": []
+    },
+    {
+      "file": "eval_19_evergreen_biogas.txt",
+      "approach": "llm_only",
+      "seconds": 49.13,
+      "passages_sent": 14,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1664,
+        "output_tokens": 5469
+      },
+      "error": "",
+      "retrieval": {},
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Evergreen Biogas Ltd.",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "The registered entity is Evergreen Biogas Ltd.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group produces renewable gas from agricultural waste and injects it into the grid.",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "The group produces renewable gas from agricultural waste and injects it into the grid.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2024",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the financial year ended 31 March 2024.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "136500000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Revenues amounted to 136.5 million Australian dollars for the period.",
+          "currency": "AUD",
+          "period": "financial year ended 31 March 2024",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "60100000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "EBITDA for the period was 60.1 million Australian dollars.",
+          "currency": "AUD",
+          "period": "financial year ended 31 March 2024",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "2690800000",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Net debt at 31 March 2024 was 2,690.8 million Australian dollars.",
+          "currency": "AUD",
+          "period": "31 March 2024",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.10",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Income was up 10% year on year.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.23",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "The single biggest client represented 23% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_19_evergreen_biogas.txt",
+      "approach": "pipeline",
+      "seconds": 39.94,
+      "passages_sent": 11,
+      "passages_total": 14,
+      "usage": {
+        "input_tokens": 1396,
+        "output_tokens": 4630
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 11,
+        "added_by_embeddings": [
+          "S005",
+          "S006",
+          "S007",
+          "S010",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Evergreen Biogas Ltd.",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "The registered entity is Evergreen Biogas Ltd.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted company legal name."
+        },
+        {
+          "field": "business",
+          "value": "The group produces renewable gas from agricultural waste and injects it into the grid.",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "The group produces renewable gas from agricultural waste and injects it into the grid.",
+          "currency": null,
+          "period": null,
+          "note": "Extracted business activities description."
+        },
+        {
+          "field": "currency",
+          "value": "AUD",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "All amounts in this review are presented in Australian dollars.",
+          "currency": null,
+          "period": null,
+          "note": "Reporting currency is Australian dollars (AUD)."
+        },
+        {
+          "field": "period",
+          "value": "financial year ended 31 March 2024",
+          "status": "found",
+          "chunk_id": "S005",
+          "quote": "These results cover the financial year ended 31 March 2024.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Latest completed annual reporting period."
+        },
+        {
+          "field": "revenue",
+          "value": "136500000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Revenues amounted to 136.5 million Australian dollars for the period.",
+          "currency": "AUD",
+          "period": "financial year ended 31 March 2024",
+          "note": "Normalized 136.5 million AUD to full currency units."
+        },
+        {
+          "field": "ebitda",
+          "value": "60100000",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "EBITDA for the period was 60.1 million Australian dollars.",
+          "currency": "AUD",
+          "period": "financial year ended 31 March 2024",
+          "note": "Reported EBITDA of 60.1 million AUD normalized to full currency units."
+        },
+        {
+          "field": "net_debt",
+          "value": "2690800000",
+          "status": "found",
+          "chunk_id": "S011",
+          "quote": "Net debt at 31 March 2024 was 2,690.8 million Australian dollars.",
+          "currency": "AUD",
+          "period": "31 March 2024",
+          "note": "Net debt at reporting period end normalized to full currency units."
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.10",
+          "status": "found",
+          "chunk_id": "S008",
+          "quote": "Income was up 10% year on year.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Normalized 10% year-on-year growth to decimal."
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.23",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "The single biggest client represented 23% of turnover.",
+          "currency": null,
+          "period": "financial year ended 31 March 2024",
+          "note": "Normalized 23% single client share to decimal."
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    },
+    {
+      "file": "eval_20_harbour_cold_chain.txt",
+      "approach": "llm_only",
+      "seconds": 58.36,
+      "passages_sent": 15,
+      "passages_total": 15,
+      "usage": {},
+      "error": "HTTP 504: Deadline expired before operation could complete.",
+      "retrieval": {},
+      "facts": []
+    },
+    {
+      "file": "eval_20_harbour_cold_chain.txt",
+      "approach": "pipeline",
+      "seconds": 37.89,
+      "passages_sent": 12,
+      "passages_total": 15,
+      "usage": {
+        "input_tokens": 1480,
+        "output_tokens": 4356
+      },
+      "error": "",
+      "retrieval": {
+        "method": "hybrid (BM25 + embeddings, RRF)",
+        "error": "",
+        "queries": 9,
+        "selected": 12,
+        "added_by_embeddings": [
+          "S004",
+          "S009",
+          "S010",
+          "S012",
+          "S013"
+        ]
+      },
+      "facts": [
+        {
+          "field": "company_name",
+          "value": "Harbour Cold Chain Holdings Ltd",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "Harbour Cold Chain Holdings Ltd is the parent company of the group.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "business",
+          "value": "The group runs temperature-controlled logistics hubs at major ports.",
+          "status": "found",
+          "chunk_id": "S003",
+          "quote": "The group runs temperature-controlled logistics hubs at major ports.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "currency",
+          "value": "USD",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "All amounts in this review are presented in thousands of US dollars unless otherwise stated.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "period",
+          "value": "2025",
+          "status": "found",
+          "chunk_id": "S004",
+          "quote": "These results cover the year ended 31 December 2025.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        },
+        {
+          "field": "revenue",
+          "value": "175300000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Turnover for the period was 175,300.",
+          "currency": "USD",
+          "period": "2025",
+          "note": ""
+        },
+        {
+          "field": "ebitda",
+          "value": "82400000",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "Operating profit before depreciation and amortisation was 82,400.",
+          "currency": "USD",
+          "period": "2025",
+          "note": ""
+        },
+        {
+          "field": "net_debt",
+          "value": "1925200000",
+          "status": "found",
+          "chunk_id": "S006",
+          "quote": "Net debt at 31 December 2025 was 1,925,200.",
+          "currency": "USD",
+          "period": "2025",
+          "note": ""
+        },
+        {
+          "field": "revenue_growth",
+          "value": "0.05",
+          "status": "found",
+          "chunk_id": "S013",
+          "quote": "This was an increase of 5% on the prior year.",
+          "currency": null,
+          "period": "2025",
+          "note": ""
+        },
+        {
+          "field": "customer_concentration",
+          "value": "0.28",
+          "status": "found",
+          "chunk_id": "S010",
+          "quote": "The single biggest client represented 28% of turnover.",
+          "currency": null,
+          "period": null,
+          "note": ""
+        }
+      ],
+      "score": {
+        "fields": {
+          "company_name": {
+            "value": true,
+            "source": true
+          },
+          "business": {
+            "value": true,
+            "source": true
+          },
+          "currency": {
+            "value": true,
+            "source": true
+          },
+          "period": {
+            "value": true,
+            "source": true
+          },
+          "revenue": {
+            "value": true,
+            "source": true
+          },
+          "ebitda": {
+            "value": true,
+            "source": true
+          },
+          "net_debt": {
+            "value": true,
+            "source": true
+          },
+          "revenue_growth": {
+            "value": true,
+            "source": true
+          },
+          "customer_concentration": {
+            "value": true,
+            "source": true
+          }
+        },
+        "valuation": "correct"
+      }
+    }
+  ]
+}

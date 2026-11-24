@@ -1,0 +1,190 @@
+FICTIONAL EXAMPLE FOR RETRIEVAL TESTING — NOT A REAL COMPANY.
+
+ANNUAL REVIEW
+
+Welcome to our annual review. This document describes our people, our network,
+our approach to risk and our results. It has been prepared for a fictional
+retrieval exercise and contains no real company information.
+
+Contents: chairman's letter; who we are; our network; our people; customers and
+service; market context; risk management; treasury and funding; accounting
+policies; results for the period; governance; sustainability.
+
+The review uses plain-English headings. Readers looking for specific figures
+should refer to the results section.
+
+CHAIRMAN'S LETTER
+
+It has been a demanding but rewarding period. Our teams handled record volumes
+through the winter peak, and we opened two new sites in the north. I want to
+thank every colleague for their commitment.
+
+The board met regularly throughout the fiscal year to review strategy, safety
+and capital allocation. We welcomed two new non-executive directors, and the
+audit committee completed a full review of internal controls.
+
+Looking ahead, we remain focused on disciplined growth, service quality and
+the safety of our people. The board believes the group is well placed for the
+coming fiscal year, although conditions in the wider economy remain uncertain.
+
+Our annual general meeting will be held in September. Shareholders will be
+invited to approve the directors' remuneration report and the reappointment
+of the auditors.
+
+WHO WE ARE
+
+The registered entity is Harbourline Logistics Group plc, a holding company
+whose subsidiaries trade under the Harbourline name.
+
+We operate a network of temperature-controlled warehouses and run refrigerated
+road haulage and freight forwarding for food producers and retailers. Our
+facilities store chilled and frozen goods, and our vehicles move them from
+ports and farms to distribution centres.
+
+Founded as a single cold store beside a harbour, we have grown steadily
+through new sites and selective acquisitions. Our purpose is simple: keep
+food safe and fresh from the dock to the shelf.
+
+OUR NETWORK
+
+We now run nineteen sites with a combined storage capacity of over 400,000
+pallet positions. Seven sites are near major ports, and the rest serve inland
+distribution hubs.
+
+The fleet comprises around 600 refrigerated trailers and 350 tractor units.
+Telematics on every vehicle report temperature, location and fuel use in real
+time, and our control tower monitors every journey around the clock.
+
+During the year we invested in automated racking at two sites and installed
+rooftop solar panels at five warehouses. We also extended our cross-docking
+operation, which lets goods move from inbound to outbound vehicles without
+long-term storage.
+
+OUR PEOPLE
+
+We employ approximately 4,200 colleagues, including drivers, warehouse
+operatives, engineers and office teams. Staff turnover among drivers fell
+during the year after we introduced new shift patterns and a retention bonus.
+Overall staff turnover remains higher than we would like in warehouse roles,
+and reducing it is a priority.
+
+Safety is our first value. The lost-time injury rate improved for the third
+consecutive year. Every new colleague completes a safety induction, and
+refresher training is mandatory each year.
+
+We continued to invest in apprenticeships and driver academies, training 180
+new drivers. Employee engagement scores rose, and colleagues told us they
+value flexible scheduling and clear career paths.
+
+CUSTOMERS AND SERVICE
+
+We serve food manufacturers, importers, wholesalers and retailers. Customer
+satisfaction scores improved, and on-time delivery reached 98.6%. Our customer
+service team handles queries around the clock, and customer complaints fell.
+
+Our biggest client, a national supermarket chain, accounted for 27% of
+turnover in the year. Its current contract runs until 2028.
+
+Our sales team won new contracts with three frozen food importers and a
+plant-based dairy brand. Sales pipeline activity remains healthy, although
+some customers delayed decisions because of economic uncertainty.
+
+MARKET CONTEXT
+
+The cold-chain logistics market continues to expand as consumers buy more
+chilled and frozen food and as retailers outsource storage and transport.
+Industry analysts expect market growth of around 4% per year over the medium
+term. Growth in online grocery shopping is driving demand for smaller,
+faster deliveries.
+
+Competition remains intense. Larger competitors are investing in automation,
+and smaller regional operators compete on price. We believe our port-centric
+network, strong safety record and service quality differentiate us.
+
+Energy prices, driver availability and regulation on refrigerant gases are
+the main external factors affecting the industry.
+
+RISK MANAGEMENT
+
+The board sets the group's risk appetite, and the audit committee oversees
+the risk register. Principal risks include loss of a major customer, energy
+cost increases, driver shortages, cyber attacks, food safety incidents and
+currency movements.
+
+Currency risk: some equipment and refrigerant gases are purchased from
+overseas suppliers. Our currency hedging policy allows forward contracts for
+up to twelve months of committed foreign currency purchases. We do not
+speculate on currency movements.
+
+Interest rate risk is managed by fixing a portion of borrowing costs. Credit
+risk is managed through credit limits and regular customer reviews.
+
+TREASURY AND FUNDING
+
+Our treasury team manages cash, liquidity and bank relationships. The group
+has a committed revolving credit facility and a term loan with a syndicate of
+four banks, both maturing in 2029. Covenants were met with comfortable
+headroom throughout the year.
+
+Cash management: surplus cash is held in instant-access deposits with
+highly rated banks. We aim to keep a strong balance sheet that can fund
+growth while maintaining investment-grade style ratios.
+
+At the year end, borrowings less cash and equivalents stood at 48.0 million
+pounds, compared with 52.5 million pounds a year earlier.
+
+ACCOUNTING POLICIES
+
+Basis of preparation: these fictional statements cover the twelve months
+ended 31 March 2026 and are presented in pounds sterling, rounded to the
+nearest hundred thousand.
+
+Depreciation is charged on a straight-line basis over the useful life of
+each asset: buildings over 40 years, racking over 15 years, refrigeration
+plant over 12 years and vehicles over 7 years. Depreciation starts when an
+asset is brought into use. Amortisation of acquired customer relationships
+is charged over 10 years. Depreciation and amortization methods are reviewed
+each year.
+
+Revenue recognition: storage income is recognised over the period goods are
+held; transport income is recognised when delivery is complete.
+
+RESULTS FOR THE PERIOD
+
+Turnover for the twelve months was 212.4 million pounds, an increase of 9%
+compared with the previous twelve months, helped by new contracts and higher
+storage occupancy.
+
+Operating profit before depreciation and amortisation was 31.8 million
+pounds, reflecting higher volumes partly offset by energy and wage costs.
+
+Operating profit after these charges was 17.2 million pounds. Capital
+expenditure of 24.6 million pounds was focused on automation, solar panels
+and fleet renewal.
+
+GOVERNANCE
+
+The board comprises a non-executive chair, three executive directors and
+four independent non-executive directors. The audit, remuneration and
+nomination committees each met at least three times during the fiscal year.
+
+The auditors' report on these fictional statements was unqualified. The
+board reviewed the effectiveness of risk management and internal control
+and found no significant weaknesses.
+
+Directors' remuneration is linked to safety, service quality, cash
+generation and long-term shareholder returns.
+
+SUSTAINABILITY
+
+We aim to reach net zero across our own operations by 2040. This year we cut
+emissions per pallet stored by 6% through solar power, LED lighting and more
+efficient refrigeration. Twenty electric tractor units joined the fleet for
+urban deliveries.
+
+We reduced food waste by redistributing surplus stock to charities with our
+customers' agreement. Water use per site fell, and all new buildings meet
+high environmental standards.
+
+We report against recognised climate disclosure frameworks and publish our
+full sustainability data online.

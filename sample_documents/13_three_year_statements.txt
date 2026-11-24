@@ -1,0 +1,61 @@
+FICTIONAL CONSOLIDATED FINANCIAL STATEMENTS - CODING TEST ONLY
+Company name: Northstar Industrial Software Ltd.
+Business: Subscription maintenance-management software for manufacturing companies.
+Reporting currency: USD.
+Annual fiscal periods: FY2023 ended 2023-12-31; FY2024 ended 2024-12-31; FY2025 ended 2025-12-31.
+Only historical annual consolidated figures follow; no forecasts are supplied.
+Income Statement (annual; amounts in USD thousands)
+Metric | FY2023 | FY2024 | FY2025
+Revenue | 40,000 | 45,000 | 50,000
+Cost of sales | (12,000) | (13,500) | (15,000)
+Gross profit | 28,000 | 31,500 | 35,000
+Research and development | (6,000) | (6,500) | (7,000)
+Sales and marketing | (5,000) | (5,500) | (6,000)
+General and administrative | (4,000) | (4,500) | (5,000)
+Other operating expenses | (1,000) | (1,000) | (1,000)
+Total operating expenses | (16,000) | (17,500) | (19,000)
+Operating income / EBIT | 12,000 | 14,000 | 16,000
+Interest expense | (1,000) | (1,100) | (1,200)
+Income tax expense | (2,200) | (2,580) | (2,960)
+Net income | 8,800 | 10,320 | 11,840
+Reported EBITDA | 14,000 | 16,200 | 18,500
+Income-statement deductions are shown in parentheses. Costs include allocated D&A; reported EBITDA adds D&A to operating income once.
+FICTIONAL CONSOLIDATED ANNUAL STATEMENTS - NORTHSTAR
+Balance Sheet (annual; amounts in USD thousands)
+Metric | FY2023 | FY2024 | FY2025
+Cash and cash equivalents | 5,000 | 6,000 | 7,000
+Marketable securities | 1,000 | 1,000 | 1,000
+Trade receivables | 6,000 | 6,500 | 7,000
+Inventory | 2,000 | 2,200 | 2,400
+Other current assets | 1,000 | 1,000 | 1,000
+Net property, plant and equipment | 20,000 | 23,000 | 26,000
+Other noncurrent assets | 5,000 | 5,000 | 5,000
+Total assets | 40,000 | 44,700 | 49,400
+Trade payables | 3,000 | 3,500 | 4,000
+Other current liabilities | 2,000 | 2,000 | 2,000
+Short-term interest-bearing debt | 1,000 | 1,000 | 1,000
+Long-term interest-bearing debt | 9,000 | 10,000 | 11,000
+Other noncurrent liabilities | 3,000 | 3,000 | 3,000
+Total liabilities | 18,000 | 19,500 | 21,000
+Total equity | 22,000 | 25,200 | 28,400
+No additional debt-like claims, restricted-cash treatment or net-debt definition is provided. Do not infer unreported metrics.
+FICTIONAL CONSOLIDATED ANNUAL STATEMENTS - NORTHSTAR
+Cash Flow Statement (annual; amounts in USD thousands)
+Metric | FY2023 | FY2024 | FY2025
+Depreciation and amortization | 2,000 | 2,200 | 2,500
+Share-based compensation | 500 | 600 | 700
+Deferred-tax operating adjustment | 100 | 100 | 100
+Signed operating working-capital cash effect | (200) | (200) | (200)
+Net operating cash flow | 11,200 | 13,020 | 14,940
+Capital-expenditure cash flow (negative outflow) | (4,000) | (5,200) | (5,500)
+Net investing cash flow | (4,000) | (5,200) | (5,500)
+Debt issuance cash flow | 1,000 | 1,000 | 1,000
+Debt repayment cash flow (negative outflow) | 0 | 0 | 0
+Share repurchase cash flow (negative outflow) | (3,000) | (4,000) | (5,000)
+Dividend cash flow (negative outflow) | (4,200) | (3,820) | (4,440)
+Net financing cash flow | (6,200) | (6,820) | (8,440)
+FX effect on cash | 0 | 0 | 0
+Net change in cash | 1,000 | 1,000 | 1,000
+Opening cash per cash-flow statement | 4,000 | 5,000 | 6,000
+Closing cash per cash-flow statement | 5,000 | 6,000 | 7,000
+Cash-flow parentheses represent cash outflows. No net-debt measure is reported; debt and cash are separate balance-sheet lines. No revenue growth or customer concentration is reported.

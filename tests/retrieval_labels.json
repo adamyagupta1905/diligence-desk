@@ -1,0 +1,15 @@
+{
+  "document": "16_long_annual_review_synonyms.txt",
+  "note": "For each field, a passage containing this exact text holds the answer. Wording deliberately avoids the search query's words (e.g. 'turnover', 'borrowings less cash', 'operating profit before depreciation').",
+  "answers": {
+    "company_name": "The registered entity is Harbourline Logistics Group plc",
+    "business": "temperature-controlled warehouses and run refrigerated",
+    "currency": "presented in pounds sterling",
+    "period": "twelve months\nended 31 March 2026",
+    "revenue": "Turnover for the twelve months was 212.4 million pounds",
+    "ebitda": "Operating profit before depreciation and amortisation was 31.8 million",
+    "net_debt": "borrowings less cash and equivalents stood at 48.0 million",
+    "revenue_growth": "an increase of 9%",
+    "customer_concentration": "accounted for 27% of\nturnover"
+  }
+}
