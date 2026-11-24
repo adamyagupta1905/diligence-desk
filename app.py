@@ -13,12 +13,15 @@ From the repository root:
 import os
 from pathlib import Path
 import sys
+import tempfile
 
 from dotenv import load_dotenv
+from deal_screening import demo
 from deal_screening.ai import FactExtractor, MemoWriter
 from deal_screening.case_page import show_case
 from deal_screening.cases import CaseService
-from deal_screening.forms import new_case_form
+from deal_screening.forms import demo_case_form, new_case_form
+from deal_screening.replay import Cassette, RecordingClient, RecordingEmbedder, ReplayClient, ReplayEmbedder
 from deal_screening.ledger_extraction import LedgerExtractor
 from deal_screening.llm import GeminiClient, GeminiEmbedder
 from deal_screening.reporting import LIMITATIONS
@@ -35,14 +38,35 @@ def retrieval_mode():
     return os.getenv("RETRIEVAL_MODE", "hybrid").strip().lower()
 
 
-def make_service():
-    directory = Path(os.getenv("DEAL_SCREENING_DATA_DIR", str(ROOT / "data")))
-    key = os.getenv("GEMINI_API_KEY", "")
-    client = GeminiClient(key)
+def model_name():
+    if demo.enabled():
+        return demo.cassette().meta.get("model", "gemini-3.8-flash")
+    return os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+
+
+def make_service(data_dir=None):
+    directory = Path(data_dir or os.getenv("DEAL_SCREENING_DATA_DIR", str(ROOT / "data")))
     mode = retrieval_mode()
-    embedder = None
-    if key.strip():
-        embedder = GeminiEmbedder(key, os.getenv("GEMINI_EMBEDDING_MODEL", "gemini-embedding-001"))
+    if demo.enabled() and os.getenv("RECORD_CASSETTE"):
+        # Maintainer tool (demo/record_demo.py): the demo UI, but with real Gemini
+        # calls whose answers are written to the cassette for later replay.
+        key = os.getenv("GEMINI_API_KEY", "")
+        cassette = Cassette(os.environ["RECORD_CASSETTE"])
+        client = RecordingClient(GeminiClient(key), cassette)
+        embedder = RecordingEmbedder(GeminiEmbedder(key, cassette.meta["embedding_model"]), cassette)
+        mode = "hybrid"
+    elif demo.enabled():
+        # Public demo: never uses an API key; answers come from recorded responses.
+        cassette = demo.cassette()
+        client = ReplayClient(cassette)
+        embedder = ReplayEmbedder(cassette, cassette.meta.get("embedding_model", "gemini-embedding-001"))
+        mode = "hybrid"
+    else:
+        key = os.getenv("GEMINI_API_KEY", "")
+        client = GeminiClient(key)
+        embedder = None
+        if key.strip():
+            embedder = GeminiEmbedder(key, os.getenv("GEMINI_EMBEDDING_MODEL", "gemini-embedding-001"))
 
     def workflow():
         return ScreeningWorkflow(
@@ -75,6 +99,14 @@ def sidebar(st, service):
         revision_id = st.sidebar.selectbox("Revision", list(labels), format_func=lambda key: labels[key],
                                            key=selection_key)
     st.sidebar.divider()
+    if demo.enabled():
+        meta = demo.cassette().meta
+        st.sidebar.info(f"**Public demo.** Model responses were recorded from a real `{meta.get('model', 'Gemini')}` "
+                        f"run on {meta.get('recorded_on', 'an earlier date')} and are replayed, so no API key is used. "
+                        "Search, validation, valuation and review run live. Your cases are private to this "
+                        "browser session and disappear when it ends.")
+        st.sidebar.markdown("[Source code on GitHub](https://github.com/adamyagupta1905/diligence-desk)")
+        return selected, names, revisions, revision_id
     has_key = bool(os.getenv("GEMINI_API_KEY", "").strip())
     mode = retrieval_mode()
     search = "Hybrid (keywords + embeddings)" if has_key and mode != "bm25" else "Keywords only (BM25)"
@@ -87,7 +119,11 @@ def intro(st):
     st.title("DiligenceDesk")
     st.markdown("Upload a company document → AI finds and cites the key facts → **you check them** → "
                 "Python values the company → AI drafts a memo → **you approve it**.")
-    st.caption("Fictional/public documents only · Saved local cases · No investment authorization")
+    if demo.enabled():
+        st.info("**Demo mode:** choose one of the fictional documents below. Keep the extracted facts and the "
+                "default assumptions to see the recorded memo; changing them still recalculates the valuation "
+                "live, but memo drafting then needs a local install with your own API key.")
+    st.caption("Fictional/public documents only · No investment authorization")
     with st.expander("How it works and limitations"):
         st.markdown(
             "1. **Search (RAG):** the document is cut into passages; hybrid search picks the ones "
@@ -104,11 +140,20 @@ def intro(st):
 def main():
     import streamlit as st
     st.set_page_config(page_title="DiligenceDesk", page_icon="📊", layout="wide")
-    service = make_service()
+    data_dir = None
+    if demo.enabled():
+        # Each visitor gets a private, temporary case store.
+        if "_demo_dir" not in st.session_state:
+            st.session_state._demo_dir = tempfile.mkdtemp(prefix="diligencedesk-demo-")
+        data_dir = st.session_state._demo_dir
+    service = make_service(data_dir)
     selected, names, revisions, revision_id = sidebar(st, service)
     if selected == "new":
         intro(st)
-        new_case_form(st, service)
+        if demo.enabled():
+            demo_case_form(st, service, model_name())
+        else:
+            new_case_form(st, service)
         return
     show_case(st, service, service.view(revision_id), selected, names[selected], revisions)
 

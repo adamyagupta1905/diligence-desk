@@ -15,6 +15,33 @@ def user_error(st, exc):
              else f"Operation could not finish ({type(exc).__name__}). Your saved case is retained.")
 
 
+def demo_case_form(st, service, model):
+    """Demo mode: pick one of the prepared documents; responses are replayed."""
+    from . import demo
+    labels = [d[0] for d in demo.DOCUMENTS]
+    choice = st.selectbox("Demo document", labels, key="demo_document")
+    entry = demo.DOCUMENTS[labels.index(choice)]
+    st.caption(entry[3])
+    source, filename = demo.document_bytes(entry)
+    with st.expander("Read the source document"):
+        st.text(source.decode().replace("\f", "\n--- PAGE BREAK ---\n"))
+    with st.form("new_case"):
+        title = st.text_input("Case title", value=choice.split(" (")[0] + " screening", key="new_title")
+        author = st.text_input("Your name", key="new_author")
+        reason = st.text_area("Case note", value="Demo screening of a fictional company.", key="new_reason")
+        submitted = st.form_submit_button("Start new screening", type="primary")
+    if submitted:
+        try:
+            with st.spinner("Searching the document and replaying the recorded extraction…"):
+                revision_id = service.create(title, source, filename, model, author, reason)
+            revision = service.repository.revision(revision_id)
+            st.session_state._open_case = revision["case_id"]
+            st.session_state._open_revision = revision_id
+            st.rerun()
+        except Exception as exc:
+            user_error(st, exc)
+
+
 def new_case_form(st, service):
     mode = st.radio("Document", ["Built-in fictional example", "Upload PDF or text"], horizontal=True)
     upload = st.file_uploader("Company document", type=["pdf", "txt"]) if mode.startswith("Upload") else None
@@ -152,10 +179,15 @@ def revision_form(st, service, view):
     with st.container():
         st.info("A new revision immediately requires fresh input and memo review. Earlier approvals "
                 "remain historical and cannot approve the new revision.")
-        kind = st.radio("Revision type", ["Revise inputs or assumptions", "Replace document", "Re-extract historical ledger"], key="revision_kind")
-        ledger_enabled = st.checkbox("Include historical statement ledger",
-                                     value=bool(view.state.get("ledger_enabled")),
-                                     key="revision_ledger_enabled_" + view.revision["id"])
+        from . import demo
+        kinds = ["Revise inputs or assumptions", "Replace document", "Re-extract historical ledger"]
+        if demo.enabled():
+            kinds = kinds[:1]  # the others need live model calls
+        kind = st.radio("Revision type", kinds, key="revision_kind")
+        ledger_enabled = bool(view.state.get("ledger_enabled"))
+        if not demo.enabled():
+            ledger_enabled = st.checkbox("Include historical statement ledger", value=ledger_enabled,
+                                         key="revision_ledger_enabled_" + view.revision["id"])
         upload = st.file_uploader("Revised company document", type=["pdf", "txt"], key="revised_document") if kind == "Replace document" else None
         force_ocr = st.checkbox("Force OCR for this replacement PDF", key="replacement_force_ocr") if upload and upload.name.lower().endswith(".pdf") else False
         with st.form("revision_" + view.revision["id"] + "_" + view.checkpoint_id):

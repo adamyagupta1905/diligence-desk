@@ -33,7 +33,7 @@ part is done by whatever is trustworthy for it:
 | Find relevant passages | Hybrid search (BM25 + embeddings, RRF) | Visible fallback if embeddings fail |
 | Read and extract facts | Gemini, as schema-validated JSON | Each fact needs a verbatim quote that Python verifies exists in the cited passage |
 | Confirm facts and assumptions | **Analyst** (checkpoint 1) | Edits are diffed into an audit trail |
-| Valuation maths | **Python only** | 130 offline tests, including independent arithmetic checks |
+| Valuation maths | **Python only** | 136 offline tests, including independent arithmetic checks |
 | Write the memo | Gemini | Every point must cite an allowed passage, calculation or assumption |
 | Approve | **Analyst** (checkpoint 2) | Approval is bound to a SHA-256 fingerprint of the exact content |
 
@@ -172,7 +172,7 @@ Reproduce the evaluations:
 │   ├── ledger*.py          historical statement ledger
 │   ├── approvals.py        content-bound approval fingerprints
 │   └── case_page.py, forms.py, interface.py   UI
-├── tests/                  130 offline tests (fake model, temporary storage)
+├── tests/                  136 offline tests (fake model, temporary storage)
 ├── evaluation/             benchmarks, 20-document evaluation, answer keys, results
 ├── sample_documents/       fictional test documents
 └── docs/                   architecture, methodology, evaluation

@@ -40,7 +40,7 @@ flowchart LR
 | `llm.py` | The **only** file that talks to Google's SDK | Yes | No |
 
 **Why split it this way?** Each part can be tested and swapped on its own. The
-tests replace Gemini with fake objects, so all 130 tests run offline for free
+tests replace Gemini with fake objects, so all 136 tests run offline for free
 in about 10 seconds. Switching to another AI provider would mean changing only
 `llm.py`.
 

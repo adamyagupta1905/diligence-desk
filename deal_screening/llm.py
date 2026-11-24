@@ -89,6 +89,8 @@ class GeminiEmbedder:
 
 def safe_api_error(exc):
     """Expose useful provider diagnostics without raw requests or credentials."""
+    if getattr(exc, "user_facing", False):
+        return str(exc)  # our own messages, written to be shown (e.g. demo replay misses)
     code = getattr(exc, "code", None)
     if not isinstance(code, int):
         return type(exc).__name__
