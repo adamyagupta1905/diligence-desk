@@ -26,7 +26,9 @@ def demo_case_form(st, service, model):
     with st.expander("Read the source document"):
         st.text(source.decode().replace("\f", "\n--- PAGE BREAK ---\n"))
     with st.form("new_case"):
-        title = st.text_input("Case title", value=choice.split(" (")[0] + " screening", key="new_title")
+        # Key per document, so the default title follows the selected document.
+        title = st.text_input("Case title", value=choice.split(" (")[0] + " screening",
+                              key="new_title_" + filename)
         author = st.text_input("Your name", key="new_author")
         reason = st.text_area("Case note", value="Demo screening of a fictional company.", key="new_reason")
         submitted = st.form_submit_button("Start new screening", type="primary")

@@ -117,7 +117,8 @@ def sidebar(st, service):
 
 def intro(st):
     st.title("DiligenceDesk")
-    st.markdown("Upload a company document → AI finds and cites the key facts → **you check them** → "
+    start = "Pick a company document" if demo.enabled() else "Upload a company document"
+    st.markdown(f"{start} → AI finds and cites the key facts → **you check them** → "
                 "Python values the company → AI drafts a memo → **you approve it**.")
     if demo.enabled():
         st.info("**Demo mode:** choose one of the fictional documents below. Keep the extracted facts and the "

@@ -39,6 +39,8 @@ part is done by whatever is trustworthy for it:
 
 ![Evidence tab: which passages reached the model and which facts cite them](docs/images/evidence_tab.png)
 
+![Draft memo: every point cites document passages, Python calculations or assumptions](docs/images/memo.png)
+
 ## Results
 
 Evaluated on **20 synthetic infrastructure annual reviews** (solar, toll roads,

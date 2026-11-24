@@ -43,8 +43,9 @@ def run_flow(label, method, data_dir, env):
         next(b for b in app.button if b.label == "Start new screening").click().run()
         if app.exception:
             return "exception: " + str(app.exception[0].value)
-        repo = CaseRepository(data_dir)
-        rid = repo.list_cases()[0]["active_revision_id"]  # one case per temporary store
+        # Demo mode gives each session its own temporary store; read that session's one case.
+        repo = CaseRepository(app.session_state["_demo_dir"])
+        rid = repo.list_cases()[0]["active_revision_id"]
         if method == "dcf":
             app.selectbox(key="method_" + rid).select("dcf").run()
         app.text_input(key="input_reviewer_" + rid).input("Demo recorder")
