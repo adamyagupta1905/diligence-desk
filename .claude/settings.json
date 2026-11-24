@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python app.py --check)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "ask": [
+      "Bash(.venv/bin/python evaluation/run_eval.py --live:*)",
+      "Bash(.venv/bin/python evaluation/benchmark_retrieval.py --live:*)",
+      "Bash(.venv/bin/python demo/record_demo.py:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Edit(./data/**)",
+      "Edit(./evaluation/results/**)",
+      "Edit(./demo/cassette.json)"
+    ]
+  }
+}
